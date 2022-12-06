@@ -13,7 +13,40 @@
   </head>
   <body>
     <header>
-      <nav class="menu"></nav>
+      <nav class="menu">
+        <div class="menu__mobi-container">
+          <a href="index.html">
+            <img
+              class="menu__mobi-container--logo"
+              src="./assets/img/logo.png"
+              alt="Mobi logo"
+          /></a>
+        </div>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__container" for="menu__toggle">
+          <span class="menu__container__button"></span>
+        </label>
+        <ul class="menu__list">
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="#">Alla Produkter</a>
+          </li>
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="#">iPhone</a>
+          </li>
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="#">Samsung</a>
+          </li>
+          <li class="menu__list__link">
+            <a class="menu__list__link__anchor" href="#">Huawei</a>
+          </li>
+        </ul>
+        <div class="menu__bag-box">
+          <a class="menu__bag-box__anchor" href="index.html"
+            ><i class="menu__bag-box__anchor--logo fa-solid fa-briefcase"></i
+          ></a>
+        </div>
+      </nav>
+      <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
     <main class="hero"></main>
