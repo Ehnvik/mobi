@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 82vh;
   background-color: c.$secondaryBgColor;
   font-size: 20px;
   font-family: c.$titleFont;
@@ -13,7 +13,7 @@
   @include c.small {
     flex-direction: row;
     justify-content: space-around;
-    height: 24vh;
+    height: 30vh;
     align-items: start;
   }
 
