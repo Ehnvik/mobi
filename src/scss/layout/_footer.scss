@@ -10,6 +10,13 @@
   font-size: 20px;
   font-family: c.$titleFont;
 
+  @include c.small {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 24vh;
+    align-items: start;
+  }
+
   &__address {
     padding-left: 0;
     align-items: center;
@@ -17,8 +24,20 @@
     width: 60%;
     text-shadow: 1px 1px 1px rgb(154, 154, 154);
 
+    @include c.small {
+      width: 20%;
+    }
+
+    @include c.large {
+      width: 20%;
+    }
+
     &__list {
       padding-bottom: 15px;
+
+      @include c.small {
+        padding-bottom: 10px;
+      }
     }
   }
   &__contact {
@@ -28,8 +47,20 @@
     width: 60%;
     text-shadow: 1px 1px 1px rgb(154, 154, 154);
 
+    @include c.small {
+      width: 20%;
+    }
+
+    @include c.large {
+      width: 20%;
+    }
+
     &__list {
       padding-bottom: 15px;
+
+      @include c.small {
+        padding-bottom: 10px;
+      }
 
       &__link {
         cursor: pointer;
@@ -50,8 +81,20 @@
     width: 60%;
     text-shadow: 1px 1px 1px rgb(154, 154, 154);
 
+    @include c.small {
+      width: 20%;
+    }
+
+    @include c.large {
+      width: 20%;
+    }
+
     &__list {
       padding-bottom: 15px;
+
+      @include c.small {
+        padding-bottom: 10px;
+      }
 
       &__link {
         text-decoration: none;
