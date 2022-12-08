@@ -1,7 +1,7 @@
 @use "../components/" as c;
 
 .checkout {
-  height: 70vh;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -15,12 +15,53 @@
 
   &__container {
     width: 60%;
-    align-items: flex-start;
 
     &__input {
-      margin-bottom: 10px;
       width: 100%;
+      margin-bottom: 10px;
       border-radius: 5px;
+
+      @include c.xSmall {
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      @include c.small {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      @include c.medium {
+        width: 55%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      @include c.large {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      @include c.xLarge {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      @include c.xxLarge {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -35,5 +76,6 @@
     border: none;
     box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+    cursor: pointer;
   }
 }
