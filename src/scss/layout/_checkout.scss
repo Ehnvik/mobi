@@ -1,0 +1,29 @@
+@use "../components/" as c;
+
+.checkout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    font-size: 30px;
+  }
+
+  &__container {
+    width: 60%;
+    &__input {
+      border-radius: 18px;
+      width: 50px;
+      height: 10px;
+    }
+  }
+
+  &__button {
+    background-color: #5c7e96;
+    color: white;
+    width: 30px;
+    height: 15px;
+  }
+}
