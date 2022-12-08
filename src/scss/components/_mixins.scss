@@ -9,6 +9,12 @@
   }
 }
 
+@mixin xSmall {
+  @media screen and (min-width: bp.$breakPoint-xSmall) {
+    @content;
+  }
+}
+
 @mixin small {
   @media screen and (min-width: bp.$breakPoint-small) {
     @content;
@@ -27,13 +33,13 @@
   }
 }
 
-@mixin xlarge {
+@mixin xLarge {
   @media screen and (min-width: bp.$breakPoint-xLarge) {
     @content;
   }
 }
 
-@mixin xxlarge {
+@mixin xxLarge {
   @media screen and (min-width: bp.$breakPoint-xxLarge) {
     @content;
   }
