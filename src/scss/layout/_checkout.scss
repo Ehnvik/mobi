@@ -1,81 +1,79 @@
 @use "../components/" as c;
 
 .checkout {
-  height: 83vh;
+  height: 95vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: c.$titleFont;
-  width: 100%;
+  text-align: center;
 
   &__header {
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: 200;
   }
 
   &__container {
-    width: 60%;
+    width: 70%;
+
+    :last-child {
+      margin-top: 50px;
+    }
 
     &__input {
       width: 100%;
+      border-radius: 18px;
+      padding: 7px;
+      font-size: 18px;
+      outline: none;
+      outline-color: c.$secondaryBgColor;
+      border: 6px solid c.$secondaryBgColor;
       margin-bottom: 10px;
-      border-radius: 5px;
 
       @include c.xSmall {
         width: 85%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
       }
 
       @include c.small {
-        width: 70%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
+        width: 100%;
       }
 
       @include c.medium {
-        width: 55%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
+        width: 80%;
       }
 
       @include c.large {
-        width: 50%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
+        width: 65%;
       }
 
       @include c.xLarge {
-        width: 50%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
+        width: 60%;
       }
 
       @include c.xxLarge {
         width: 50%;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
       }
     }
   }
 
   &__button {
     background-color: #5c7e96;
+    font-size: 16px;
     color: white;
-    width: 80px;
-    height: 30px;
+    width: 90px;
+    height: 40px;
     font-family: c.$primaryFont;
-    margin-top: 20px;
     border-radius: 5px;
     border: none;
     box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 }
