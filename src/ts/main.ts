@@ -28,9 +28,11 @@ products.forEach((product: IProducts) => {
 
   container.classList.add("products");
   productContainer.classList.add("products__container");
+  productImg.classList.add("products__container__image-container__image");
 
   product.imageUrls.forEach((image: string) => {
     productImg.src = image;
+    productImg.setAttribute("alt", "mobilskal");
   });
 
   productInfo.innerHTML = product.description;
