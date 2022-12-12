@@ -321,4 +321,175 @@ export const products = [
       "/src/assets/img/samsung/samsung-12-white.jpg",
     ],
   },
+
+  // Huawei
+
+  {
+    brand: "huawei",
+    name: "huawei 1",
+    description: "SANDSTORM MARBLE till huawei P50 pro",
+    price: 495,
+    amount: 1,
+    colors: ["brown", "green", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-1-brown.JPG",
+      "/src/assets/img/huawei/huawei-1-green.JPG",
+      "/src/assets/img/huawei/huawei-1-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 2",
+    description: "Wallet Magnetic till Huawei Enjoy 50",
+    price: 395,
+    amount: 1,
+    colors: ["green", "purple", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-2-green.JPG",
+      "/src/assets/img/huawei/huawei-2-purple.JPG",
+      "/src/assets/img/huawei/huawei-2-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 3",
+    description: "THUNDER MARBLE till Huawei P40 Pro",
+    price: 795,
+    amount: 1,
+    colors: ["black", "blue", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-3-black.JPG",
+      "/src/assets/img/huawei/huawei-3-blue.JPG",
+      "/src/assets/img/huawei/huawei-3-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 4",
+    description: "CaseMe Luxury Vintage Matte Leather till Huawei P50",
+    price: 295,
+    amount: 1,
+    colors: ["black", "blue", "brown"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-4-black.JPG",
+      "/src/assets/img/huawei/huawei-4-blue.JPG",
+      "/src/assets/img/huawei/huawei-4-brown.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 5",
+    description: "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
+    price: 495,
+    amount: 1,
+    colors: ["black", "blue", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-5-black.JPG",
+      "/src/assets/img/huawei/huawei-5-blue.JPG",
+      "/src/assets/img/huawei/huawei-5-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 6",
+    description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
+    price: 795,
+    amount: 1,
+    colors: ["black", "green", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-6-black.JPG",
+      "/src/assets/img/huawei/huawei-6-green.JPG",
+      "/src/assets/img/huawei/huawei-6-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 7",
+    description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
+    price: 695,
+    amount: 1,
+    colors: ["blue", "gold", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-7-blue.JPG",
+      "/src/assets/img/huawei/huawei-7-gold.JPG",
+      "/src/assets/img/huawei/huawei-7-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 8",
+    description: "SMOKE till Huawei P20",
+    price: 595,
+    amount: 1,
+    colors: ["green", "purple", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-8-green.JPG",
+      "/src/assets/img/huawei/huawei-8-purple.JPG",
+      "/src/assets/img/huawei/huawei-8-red.JPG",
+    ],
+  },
+  
+  {
+    brand: "huawei",
+    name: "huawei 9",
+    description: "GLOSSY till Huawei P20",
+    price: 895,
+    amount: 1,
+    colors: ["black", "gold", "pink"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-9-black.JPG",
+      "/src/assets/img/huawei/huawei-9-gold.JPG",
+      "/src/assets/img/huawei/huawei-9-pink.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 10",
+    description: "BRAIDED ONYX till Huawei P30",
+    price: 595,
+    amount: 1,
+    colors: ["black", "blue", "red"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-10-black.JPG",
+      "/src/assets/img/huawei/huawei-10-blue.JPG",
+      "/src/assets/img/huawei/huawei-10-red.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 11",
+    description: "SAGE till  Huawei P40",
+    price: 495,
+    amount: 1,
+    colors: ["black", "brown", "pink"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-11-black.JPG",
+      "/src/assets/img/huawei/huawei-11-brown.JPG",
+      "/src/assets/img/huawei/huawei-11-pink.JPG",
+    ],
+  },
+
+  {
+    brand: "huawei",
+    name: "huawei 12",
+    description: "AUX till Huawei P30 Lite",
+    price: 995,
+    amount: 1,
+    colors: ["black", "blue", "green"],
+    imageUrls: [
+      "/src/assets/img/huawei/huawei-12-black.JPG",
+      "/src/assets/img/huawei/huawei-12-blue.JPG",
+      "/src/assets/img/huawei/huawei-12-green.JPG",
+    ],
+  },
+
 ];
