@@ -1,4 +1,6 @@
-export const products = [
+import { IProducts } from "../models/IProducts";
+
+export const products: IProducts[] = [
   // Iphone
   {
     brand: "iphone",
@@ -383,7 +385,8 @@ export const products = [
   {
     brand: "huawei",
     name: "huawei 5",
-    description: "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
+    description:
+      "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
     price: 495,
     amount: 1,
     colors: ["black", "blue", "red"],
@@ -435,7 +438,7 @@ export const products = [
       "/src/assets/img/huawei/huawei-8-red.JPG",
     ],
   },
-  
+
   {
     brand: "huawei",
     name: "huawei 9",
@@ -491,5 +494,4 @@ export const products = [
       "/src/assets/img/huawei/huawei-12-green.JPG",
     ],
   },
-
 ];

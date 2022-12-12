@@ -1,0 +1,19 @@
+@use "../components/" as c;
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    margin-left: 15px;
+    @include c.small {
+      width: 25%;
+      margin: 10px 0px;
+    }
+  }
+}
