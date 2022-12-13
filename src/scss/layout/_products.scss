@@ -16,9 +16,19 @@
       margin: 10px 5px;
     }
     &__image-container {
+      height: 450px;
+      width: 450px;
+      box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
+        0px 10px 5px rgba(151, 149, 149, 0.1);
+      border-radius: 50%;
       &__image {
         max-height: 350px;
         max-width: 350px;
+
+        @include c.small {
+          max-height: 200px;
+          max-width: 200px;
+        }
       }
     }
   }
