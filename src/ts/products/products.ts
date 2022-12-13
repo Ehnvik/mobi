@@ -442,14 +442,14 @@ export const products: IProducts[] = [
   {
     brand: "huawei",
     name: "huawei 9",
-    description: "GLOSSY till Huawei P20",
+    description: "Scanic For Huawei P40",
     price: 895,
     amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
       "/assets/img/huawei/huawei-9-black.JPG",
-      "/assets/img/huawei/huawei-9-gold.JPG",
-      "/assets/img/huawei/huawei-9-pink.JPG",
+      "/assets/img/huawei/huawei-9-blue.JPG",
+      "/assets/img/huawei/huawei-9-green.JPG",
     ],
   },
 

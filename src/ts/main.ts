@@ -10,10 +10,6 @@ products.forEach((product: IProducts) => {
     "div"
   ) as HTMLDivElement;
 
-  let imgContainer: HTMLDivElement = document.createElement(
-    "div"
-  ) as HTMLDivElement;
-
   let productImg: HTMLImageElement = document.createElement(
     "img"
   ) as HTMLImageElement;
@@ -28,8 +24,9 @@ products.forEach((product: IProducts) => {
 
   container.classList.add("products");
   productContainer.classList.add("products__container");
-  imgContainer.classList.add("products__container__image-container");
-  productImg.classList.add("products__container__image-container__image");
+  productImg.classList.add("products__container__image");
+  productInfo.classList.add("products__container__info");
+  productPrice.classList.add("products__container__price");
 
   product.imageUrls.forEach((image: string) => {
     productImg.src = image;
@@ -42,8 +39,7 @@ products.forEach((product: IProducts) => {
   productPrice.innerHTML = priceText + " kr";
 
   container.appendChild(productContainer);
-  productContainer.appendChild(imgContainer);
-  imgContainer.appendChild(productImg);
+  productContainer.appendChild(productImg);
   productContainer.appendChild(productInfo);
   productContainer.appendChild(productPrice);
 });
