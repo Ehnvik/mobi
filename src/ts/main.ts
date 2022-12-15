@@ -50,6 +50,18 @@ let container: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
 
+// Products link from index.html
+let productsLink: HTMLAnchorElement = document.getElementById(
+  "products"
+) as HTMLAnchorElement;
+
+productsLink.addEventListener("click", () => {
+  container.innerHTML = "";
+  // createHtml(products);
+  sendToLs(products);
+  getFromLs();
+});
+
 // All products
 let allProductsLink: HTMLLIElement = document.getElementById(
   "all-products"
