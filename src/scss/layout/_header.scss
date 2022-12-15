@@ -85,6 +85,14 @@
             transform: scale(1);
           }
         }
+        &__anchor {
+          font-weight: 400;
+          text-shadow: 1px 1px 1px rgb(154, 154, 154);
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            text-shadow: 1px 1px 1px rgb(44, 44, 44);
+          }
+        }
       }
     }
   }
@@ -152,8 +160,12 @@
     &__link {
       color: c.$primaryColor;
       font-family: c.$titleFont;
-      font-weight: 500;
       cursor: pointer;
+      a {
+        text-decoration: none;
+        color: c.$primaryColor;
+        font-family: c.$titleFont;
+      }
     }
   }
 }
