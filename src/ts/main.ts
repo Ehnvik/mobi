@@ -1,6 +1,10 @@
 import { IProducts } from "./models/IProducts";
 import { products } from "./products/products";
 
+let container: HTMLDivElement = document.getElementById(
+  "products"
+) as HTMLDivElement;
+
 function createHtml(products: IProducts[]) {
   products.forEach((product: IProducts) => {
     let container: HTMLDivElement = document.getElementById(
@@ -45,10 +49,6 @@ function createHtml(products: IProducts[]) {
     productContainer.appendChild(productPrice);
   });
 }
-
-let container: HTMLDivElement = document.getElementById(
-  "products"
-) as HTMLDivElement;
 
 // Products link from index.html
 let productsLink: HTMLAnchorElement = document.getElementById(
