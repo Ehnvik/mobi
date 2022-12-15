@@ -46,12 +46,17 @@ function createHtml(products: IProducts[]) {
   });
 }
 
+let container: HTMLDivElement = document.getElementById(
+  "products"
+) as HTMLDivElement;
+
 // All products
 let allProductsLink: HTMLLIElement = document.getElementById(
   "all-products"
 ) as HTMLLIElement;
 
 allProductsLink.addEventListener("click", () => {
+  container.innerHTML = "";
   createHtml(products);
 });
 
@@ -61,6 +66,7 @@ let iphoneLink: HTMLLIElement = document.getElementById(
 ) as HTMLLIElement;
 
 iphoneLink.addEventListener("click", () => {
+  container.innerHTML = "";
   let iphoneList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "iphone"
   );
@@ -73,6 +79,7 @@ let samsungLink: HTMLLIElement = document.getElementById(
 ) as HTMLLIElement;
 
 samsungLink.addEventListener("click", () => {
+  container.innerHTML = "";
   let samsungList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "samsung"
   );
@@ -85,6 +92,7 @@ let huaweiLink: HTMLLIElement = document.getElementById(
 ) as HTMLLIElement;
 
 huaweiLink.addEventListener("click", () => {
+  container.innerHTML = "";
   let huaweiList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "huawei"
   );
