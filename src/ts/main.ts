@@ -43,3 +43,8 @@ products.forEach((product: IProducts) => {
   productContainer.appendChild(productInfo);
   productContainer.appendChild(productPrice);
 });
+
+let newList = products.filter(
+  (newArrayOfObjects) => newArrayOfObjects.brand === "iphone"
+);
+console.log(newList);
