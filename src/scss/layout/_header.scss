@@ -56,6 +56,8 @@
       gap: 25px;
       width: 100%;
       &__link {
+        font-size: 20px;
+        font-family: c.$titleFont;
         color: c.$primaryColor;
         animation-name: nav-link-load;
         animation-duration: var(--nav-link-load-time);
@@ -63,6 +65,13 @@
         animation-delay: var(--nav-load-time);
         animation-fill-mode: forwards;
         transform: scale(0);
+        font-weight: 400;
+        text-shadow: 1px 1px 1px rgb(154, 154, 154);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          text-shadow: 1px 1px 1px rgb(44, 44, 44);
+        }
         @keyframes nav-link-load {
           0% {
             transform: scale(0);
@@ -74,14 +83,6 @@
 
           100% {
             transform: scale(1);
-          }
-        }
-        &__anchor {
-          font-weight: 400;
-          text-shadow: 1px 1px 1px rgb(154, 154, 154);
-          transition: all 0.2s ease-in-out;
-          &:hover {
-            text-shadow: 1px 1px 1px rgb(44, 44, 44);
           }
         }
       }
@@ -149,11 +150,10 @@
     margin: 0;
     padding: 0;
     &__link {
-      a {
-        text-decoration: none;
-        color: c.$primaryColor;
-        font-family: c.$titleFont;
-      }
+      color: c.$primaryColor;
+      font-family: c.$titleFont;
+      font-weight: 500;
+      cursor: pointer;
     }
   }
 }
