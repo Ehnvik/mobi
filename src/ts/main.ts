@@ -57,7 +57,9 @@ let allProductsLink: HTMLLIElement = document.getElementById(
 
 allProductsLink.addEventListener("click", () => {
   container.innerHTML = "";
-  createHtml(products);
+  // createHtml(products);
+  sendToLs(products);
+  getFromLs();
 });
 
 // iPhone
@@ -70,7 +72,9 @@ iphoneLink.addEventListener("click", () => {
   let iphoneList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "iphone"
   );
-  createHtml(iphoneList);
+  // createHtml(iphoneList);
+  sendToLs(iphoneList);
+  getFromLs();
 });
 
 // Samsung
@@ -83,7 +87,9 @@ samsungLink.addEventListener("click", () => {
   let samsungList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "samsung"
   );
-  createHtml(samsungList);
+  // createHtml(samsungList);
+  sendToLs(samsungList);
+  getFromLs();
 });
 
 //Huawei
@@ -96,5 +102,22 @@ huaweiLink.addEventListener("click", () => {
   let huaweiList: IProducts[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "huawei"
   );
-  createHtml(huaweiList);
+  // createHtml(huaweiList);
+  sendToLs(huaweiList);
+  getFromLs();
+});
+
+function sendToLs(products: IProducts[]) {
+  localStorage.setItem("products", JSON.stringify(products));
+}
+
+function getFromLs() {
+  let productList: IProducts[] = JSON.parse(
+    localStorage.getItem("products") || "[]"
+  );
+  createHtml(productList);
+}
+
+window.addEventListener("load", () => {
+  getFromLs();
 });
