@@ -16,9 +16,25 @@
       width: 23%;
       margin: 10px 5px;
       cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        transform: scale(1.2);
+      animation-name: projects-load;
+      animation-duration: var(--projects-load-time);
+      animation-timing-function: ease-in;
+      animation-delay: var(--projects-time);
+      animation-fill-mode: forwards;
+      transform: scale(0);
+
+      @keyframes projects-load {
+        0% {
+          transform: scale(0);
+        }
+
+        90% {
+          transform: scale(1.1);
+        }
+
+        100% {
+          transform: scale(1);
+        }
       }
     }
     &__image {
@@ -31,6 +47,11 @@
       @include c.small {
         max-height: 150px;
         max-width: 150px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          box-shadow: 1px 0px 40px rgba(92, 126, 150),
+            30px 10px 5px rgba(151, 149, 149, 0.1);
+        }
       }
       @include c.medium {
         max-height: 225px;
