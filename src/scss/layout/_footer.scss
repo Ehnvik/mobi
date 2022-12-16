@@ -7,14 +7,23 @@
   justify-content: center;
   height: 82vh;
   background-color: c.$secondaryBgColor;
-  font-size: 20px;
+  font-size: 18px;
   font-family: c.$titleFont;
 
   @include c.small {
     flex-direction: row;
     justify-content: space-around;
-    height: 30vh;
+    height: 28vh;
     align-items: start;
+    font-size: 16px;
+  }
+
+  @include c.medium {
+    font-size: 18px;
+  }
+
+  @include c.large {
+    height: 30vh;
   }
 
   &__address {
@@ -30,6 +39,7 @@
 
     @include c.large {
       width: 20%;
+      padding-top: 14px;
     }
 
     &__list {
@@ -53,6 +63,7 @@
 
     @include c.large {
       width: 20%;
+      padding-top: 14px;
     }
 
     &__list {
@@ -87,6 +98,7 @@
 
     @include c.large {
       width: 20%;
+      padding-top: 14px;
     }
 
     &__list {
