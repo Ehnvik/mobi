@@ -1,4 +1,6 @@
-export const products = [
+import { IProducts } from "../models/IProducts";
+
+export const products: IProducts[] = [
   // Iphone
   {
     brand: "iphone",
@@ -8,9 +10,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-1-black.jpg",
-      "/src/assets/img/iphone/iphone-1-blue.jpg",
-      "/src/assets/img/iphone/iphone-1-red.jpg",
+      "/assets/img/iphone/iphone-1-black.jpg",
+      "/assets/img/iphone/iphone-1-blue.jpg",
+      "/assets/img/iphone/iphone-1-red.jpg",
     ],
   },
 
@@ -23,9 +25,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "pink"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-2-black.jpg",
-      "/src/assets/img/iphone/iphone-2-blue.jpg",
-      "/src/assets/img/iphone/iphone-2-pink.jpg",
+      "/assets/img/iphone/iphone-2-black.jpg",
+      "/assets/img/iphone/iphone-2-blue.jpg",
+      "/assets/img/iphone/iphone-2-pink.jpg",
     ],
   },
   {
@@ -36,9 +38,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-3-black.jpg",
-      "/src/assets/img/iphone/iphone-3-blue.jpg",
-      "/src/assets/img/iphone/iphone-3-red.jpg",
+      "/assets/img/iphone/iphone-3-black.jpg",
+      "/assets/img/iphone/iphone-3-blue.jpg",
+      "/assets/img/iphone/iphone-3-red.jpg",
     ],
   },
   {
@@ -50,9 +52,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "orange"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-4-black.jpg",
-      "/src/assets/img/iphone/iphone-4-blue.jpg",
-      "/src/assets/img/iphone/iphone-4-orange.jpg",
+      "/assets/img/iphone/iphone-4-black.jpg",
+      "/assets/img/iphone/iphone-4-blue.jpg",
+      "/assets/img/iphone/iphone-4-orange.jpg",
     ],
   },
   {
@@ -64,9 +66,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "white"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-5-black.jpg",
-      "/src/assets/img/iphone/iphone-5-blue.jpg",
-      "/src/assets/img/iphone/iphone-5-white.jpg",
+      "/assets/img/iphone/iphone-5-black.jpg",
+      "/assets/img/iphone/iphone-5-blue.jpg",
+      "/assets/img/iphone/iphone-5-white.jpg",
     ],
   },
   {
@@ -77,9 +79,9 @@ export const products = [
     amount: 1,
     colors: ["blue", "green", "purple"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-6-blue.jpg",
-      "/src/assets/img/iphone/iphone-6-green.jpg",
-      "/src/assets/img/iphone/iphone-6-purple.jpg",
+      "/assets/img/iphone/iphone-6-blue.jpg",
+      "/assets/img/iphone/iphone-6-green.jpg",
+      "/assets/img/iphone/iphone-6-purple.jpg",
     ],
   },
   {
@@ -90,9 +92,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "pink"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-7-black.jpg",
-      "/src/assets/img/iphone/iphone-7-blue.jpg",
-      "/src/assets/img/iphone/iphone-7-pink.jpg",
+      "/assets/img/iphone/iphone-7-black.jpg",
+      "/assets/img/iphone/iphone-7-blue.jpg",
+      "/assets/img/iphone/iphone-7-pink.jpg",
     ],
   },
   {
@@ -103,9 +105,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-8-black.jpg",
-      "/src/assets/img/iphone/iphone-8-green.jpg",
-      "/src/assets/img/iphone/iphone-8-pink.jpg",
+      "/assets/img/iphone/iphone-8-black.jpg",
+      "/assets/img/iphone/iphone-8-green.jpg",
+      "/assets/img/iphone/iphone-8-pink.jpg",
     ],
   },
   {
@@ -116,9 +118,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "brown"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-9-black.jpg",
-      "/src/assets/img/iphone/iphone-9-blue.jpg",
-      "/src/assets/img/iphone/iphone-9-brown.jpg",
+      "/assets/img/iphone/iphone-9-black.jpg",
+      "/assets/img/iphone/iphone-9-blue.jpg",
+      "/assets/img/iphone/iphone-9-brown.jpg",
     ],
   },
   {
@@ -129,9 +131,9 @@ export const products = [
     amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-10-black.jpg",
-      "/src/assets/img/iphone/iphone-10-pink.jpg",
-      "/src/assets/img/iphone/iphone-10-white.jpg",
+      "/assets/img/iphone/iphone-10-black.jpg",
+      "/assets/img/iphone/iphone-10-pink.jpg",
+      "/assets/img/iphone/iphone-10-white.jpg",
     ],
   },
   {
@@ -142,9 +144,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "white"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-1-black.jpg",
-      "/src/assets/img/iphone/iphone-1-blue.jpg",
-      "/src/assets/img/iphone/iphone-1-white.jpg",
+      "/assets/img/iphone/iphone-11-black.jpg",
+      "/assets/img/iphone/iphone-11-blue.jpg",
+      "/assets/img/iphone/iphone-11-white.jpg",
     ],
   },
   {
@@ -155,9 +157,9 @@ export const products = [
     amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
-      "/src/assets/img/iphone/iphone-1-black.jpg",
-      "/src/assets/img/iphone/iphone-1-pink.jpg",
-      "/src/assets/img/iphone/iphone-1-white.jpg",
+      "/assets/img/iphone/iphone-12-black.jpg",
+      "/assets/img/iphone/iphone-12-pink.jpg",
+      "/assets/img/iphone/iphone-12-white.jpg",
     ],
   },
 
@@ -166,28 +168,28 @@ export const products = [
   {
     brand: "samsung",
     name: "samsung 1",
-    description: "INTENSE till galaxy s20",
+    description: "INTENSE till galaxy S20",
     price: 595,
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-1-black.jpg",
-      "/src/assets/img/samsung/samsung-1-green.jpg",
-      "/src/assets/img/samsung/samsung-1-pink.jpg",
+      "/assets/img/samsung/samsung-1-black.jpg",
+      "/assets/img/samsung/samsung-1-green.jpg",
+      "/assets/img/samsung/samsung-1-pink.jpg",
     ],
   },
 
   {
     brand: "samsung",
     name: "samsung 2",
-    description: "THUNDER MARBLE till galaxy s20",
+    description: "THUNDER MARBLE till galaxy S20",
     price: 695,
     amount: 1,
     colors: ["black", "gold", "white"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-2-black.jpg",
-      "/src/assets/img/samsung/samsung-2-gold.jpg",
-      "/src/assets/img/samsung/samsung-2-white.jpg",
+      "/assets/img/samsung/samsung-2-black.jpg",
+      "/assets/img/samsung/samsung-2-gold.jpg",
+      "/assets/img/samsung/samsung-2-white.jpg",
     ],
   },
 
@@ -199,9 +201,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "white"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-3-black.jpg",
-      "/src/assets/img/samsung/samsung-3-green.jpg",
-      "/src/assets/img/samsung/samsung-3-white.jpg",
+      "/assets/img/samsung/samsung-3-black.jpg",
+      "/assets/img/samsung/samsung-3-green.jpg",
+      "/assets/img/samsung/samsung-3-white.jpg",
     ],
   },
   {
@@ -212,9 +214,9 @@ export const products = [
     amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-4-black.jpg",
-      "/src/assets/img/samsung/samsung-4-gold.jpg",
-      "/src/assets/img/samsung/samsung-4-pink.jpg",
+      "/assets/img/samsung/samsung-4-black.jpg",
+      "/assets/img/samsung/samsung-4-gold.jpg",
+      "/assets/img/samsung/samsung-4-pink.jpg",
     ],
   },
   {
@@ -225,9 +227,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-5-black.jpg",
-      "/src/assets/img/samsung/samsung-5-green.jpg",
-      "/src/assets/img/samsung/samsung-5-pink.jpg",
+      "/assets/img/samsung/samsung-5-black.jpg",
+      "/assets/img/samsung/samsung-5-green.jpg",
+      "/assets/img/samsung/samsung-5-pink.jpg",
     ],
   },
   {
@@ -238,9 +240,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-6-black.jpg",
-      "/src/assets/img/samsung/samsung-6-green.jpg",
-      "/src/assets/img/samsung/samsung-6-pink.jpg",
+      "/assets/img/samsung/samsung-6-black.jpg",
+      "/assets/img/samsung/samsung-6-green.jpg",
+      "/assets/img/samsung/samsung-6-pink.jpg",
     ],
   },
   {
@@ -251,9 +253,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-7-black.jpg",
-      "/src/assets/img/samsung/samsung-7-green.jpg",
-      "/src/assets/img/samsung/samsung-7-pink.jpg",
+      "/assets/img/samsung/samsung-7-black.jpg",
+      "/assets/img/samsung/samsung-7-green.jpg",
+      "/assets/img/samsung/samsung-7-pink.jpg",
     ],
   },
   {
@@ -264,9 +266,9 @@ export const products = [
     amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-8-black.jpg",
-      "/src/assets/img/samsung/samsung-8-pink.jpg",
-      "/src/assets/img/samsung/samsung-8-white.jpg",
+      "/assets/img/samsung/samsung-8-black.jpg",
+      "/assets/img/samsung/samsung-8-pink.jpg",
+      "/assets/img/samsung/samsung-8-white.jpg",
     ],
   },
   {
@@ -277,9 +279,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-9-black.jpg",
-      "/src/assets/img/samsung/samsung-9-green.jpg",
-      "/src/assets/img/samsung/samsung-9-pink.jpg",
+      "/assets/img/samsung/samsung-9-black.jpg",
+      "/assets/img/samsung/samsung-9-green.jpg",
+      "/assets/img/samsung/samsung-9-pink.jpg",
     ],
   },
   {
@@ -290,9 +292,9 @@ export const products = [
     amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-10-black.jpg",
-      "/src/assets/img/samsung/samsung-10-gold.jpg",
-      "/src/assets/img/samsung/samsung-10-pink.jpg",
+      "/assets/img/samsung/samsung-10-black.jpg",
+      "/assets/img/samsung/samsung-10-gold.jpg",
+      "/assets/img/samsung/samsung-10-pink.jpg",
     ],
   },
   {
@@ -303,9 +305,9 @@ export const products = [
     amount: 1,
     colors: ["black", "gold", "green"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-11-black.jpg",
-      "/src/assets/img/samsung/samsung-11-gold.jpg",
-      "/src/assets/img/samsung/samsung-11-green.jpg",
+      "/assets/img/samsung/samsung-11-black.jpg",
+      "/assets/img/samsung/samsung-11-gold.jpg",
+      "/assets/img/samsung/samsung-11-green.jpg",
     ],
   },
   {
@@ -316,9 +318,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "white"],
     imageUrls: [
-      "/src/assets/img/samsung/samsung-12-black.jpg",
-      "/src/assets/img/samsung/samsung-12-green.jpg",
-      "/src/assets/img/samsung/samsung-12-white.jpg",
+      "/assets/img/samsung/samsung-12-black.jpg",
+      "/assets/img/samsung/samsung-12-green.jpg",
+      "/assets/img/samsung/samsung-12-white.jpg",
     ],
   },
 
@@ -332,9 +334,9 @@ export const products = [
     amount: 1,
     colors: ["brown", "green", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-1-brown.JPG",
-      "/src/assets/img/huawei/huawei-1-green.JPG",
-      "/src/assets/img/huawei/huawei-1-red.JPG",
+      "/assets/img/huawei/huawei-1-brown.JPG",
+      "/assets/img/huawei/huawei-1-green.JPG",
+      "/assets/img/huawei/huawei-1-red.JPG",
     ],
   },
 
@@ -346,9 +348,9 @@ export const products = [
     amount: 1,
     colors: ["green", "purple", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-2-green.JPG",
-      "/src/assets/img/huawei/huawei-2-purple.JPG",
-      "/src/assets/img/huawei/huawei-2-red.JPG",
+      "/assets/img/huawei/huawei-2-green.JPG",
+      "/assets/img/huawei/huawei-2-purple.JPG",
+      "/assets/img/huawei/huawei-2-red.JPG",
     ],
   },
 
@@ -360,9 +362,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-3-black.JPG",
-      "/src/assets/img/huawei/huawei-3-blue.JPG",
-      "/src/assets/img/huawei/huawei-3-red.JPG",
+      "/assets/img/huawei/huawei-3-black.JPG",
+      "/assets/img/huawei/huawei-3-blue.JPG",
+      "/assets/img/huawei/huawei-3-red.JPG",
     ],
   },
 
@@ -374,23 +376,24 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "brown"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-4-black.JPG",
-      "/src/assets/img/huawei/huawei-4-blue.JPG",
-      "/src/assets/img/huawei/huawei-4-brown.JPG",
+      "/assets/img/huawei/huawei-4-black.JPG",
+      "/assets/img/huawei/huawei-4-blue.JPG",
+      "/assets/img/huawei/huawei-4-brown.JPG",
     ],
   },
 
   {
     brand: "huawei",
     name: "huawei 5",
-    description: "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
+    description:
+      "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
     price: 495,
     amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-5-black.JPG",
-      "/src/assets/img/huawei/huawei-5-blue.JPG",
-      "/src/assets/img/huawei/huawei-5-red.JPG",
+      "/assets/img/huawei/huawei-5-black.JPG",
+      "/assets/img/huawei/huawei-5-blue.JPG",
+      "/assets/img/huawei/huawei-5-red.JPG",
     ],
   },
 
@@ -402,9 +405,9 @@ export const products = [
     amount: 1,
     colors: ["black", "green", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-6-black.JPG",
-      "/src/assets/img/huawei/huawei-6-green.JPG",
-      "/src/assets/img/huawei/huawei-6-red.JPG",
+      "/assets/img/huawei/huawei-6-black.JPG",
+      "/assets/img/huawei/huawei-6-green.JPG",
+      "/assets/img/huawei/huawei-6-red.JPG",
     ],
   },
 
@@ -416,9 +419,9 @@ export const products = [
     amount: 1,
     colors: ["blue", "gold", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-7-blue.JPG",
-      "/src/assets/img/huawei/huawei-7-gold.JPG",
-      "/src/assets/img/huawei/huawei-7-red.JPG",
+      "/assets/img/huawei/huawei-7-blue.JPG",
+      "/assets/img/huawei/huawei-7-gold.JPG",
+      "/assets/img/huawei/huawei-7-red.JPG",
     ],
   },
 
@@ -430,23 +433,23 @@ export const products = [
     amount: 1,
     colors: ["green", "purple", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-8-green.JPG",
-      "/src/assets/img/huawei/huawei-8-purple.JPG",
-      "/src/assets/img/huawei/huawei-8-red.JPG",
+      "/assets/img/huawei/huawei-8-green.JPG",
+      "/assets/img/huawei/huawei-8-purple.JPG",
+      "/assets/img/huawei/huawei-8-red.JPG",
     ],
   },
-  
+
   {
     brand: "huawei",
     name: "huawei 9",
-    description: "GLOSSY till Huawei P20",
+    description: "Scanic till Huawei P40",
     price: 895,
     amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-9-black.JPG",
-      "/src/assets/img/huawei/huawei-9-gold.JPG",
-      "/src/assets/img/huawei/huawei-9-pink.JPG",
+      "/assets/img/huawei/huawei-9-black.JPG",
+      "/assets/img/huawei/huawei-9-blue.JPG",
+      "/assets/img/huawei/huawei-9-green.JPG",
     ],
   },
 
@@ -458,9 +461,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-10-black.JPG",
-      "/src/assets/img/huawei/huawei-10-blue.JPG",
-      "/src/assets/img/huawei/huawei-10-red.JPG",
+      "/assets/img/huawei/huawei-10-black.JPG",
+      "/assets/img/huawei/huawei-10-blue.JPG",
+      "/assets/img/huawei/huawei-10-red.JPG",
     ],
   },
 
@@ -472,9 +475,9 @@ export const products = [
     amount: 1,
     colors: ["black", "brown", "pink"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-11-black.JPG",
-      "/src/assets/img/huawei/huawei-11-brown.JPG",
-      "/src/assets/img/huawei/huawei-11-pink.JPG",
+      "/assets/img/huawei/huawei-11-black.JPG",
+      "/assets/img/huawei/huawei-11-brown.JPG",
+      "/assets/img/huawei/huawei-11-pink.JPG",
     ],
   },
 
@@ -486,10 +489,9 @@ export const products = [
     amount: 1,
     colors: ["black", "blue", "green"],
     imageUrls: [
-      "/src/assets/img/huawei/huawei-12-black.JPG",
-      "/src/assets/img/huawei/huawei-12-blue.JPG",
-      "/src/assets/img/huawei/huawei-12-green.JPG",
+      "/assets/img/huawei/huawei-12-black.JPG",
+      "/assets/img/huawei/huawei-12-blue.JPG",
+      "/assets/img/huawei/huawei-12-green.JPG",
     ],
   },
-
 ];

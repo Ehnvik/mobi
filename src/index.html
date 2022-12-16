@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./ts/main.ts" defer type="module"></script>
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
+    <script src="./ts/main.ts" defer type="module"></script>
     <link rel="stylesheet" href="./scss/main.scss" />
     <title>Mobi Mobilskal</title>
   </head>
@@ -28,7 +28,12 @@
         </label>
         <ul class="menu__list">
           <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Alla Produkter</a>
+            <a
+              id="products"
+              class="menu__list__link__anchor"
+              href="./html/products.html"
+              >Produkter</a
+            >
           </li>
           <li class="menu__list__link">
             <a class="menu__list__link__anchor" href="#">Kontakt</a>
@@ -50,11 +55,13 @@
       <div class="hero__container">
         <h1 class="hero__container__title">Mobi mobilskal för alla</h1>
         <h2 class="hero__container__second-title">
-          Upptäck de senaste mobilskal till de bästa priserna
+          Upptäck de senaste mobilskalen till de bästa priserna
         </h2>
-
-        <a class="hero__container__link" href="#">
-          <button class="hero__container__link__btn">Mer</button>
+        <a
+          id="all-products-link-button"
+          class="hero__container__link"
+          href="./html/products.html">
+          <button class="hero__container__link__btn">Handla</button>
         </a>
       </div>
     </main>
@@ -62,7 +69,7 @@
     <footer class="footer">
       <ul class="footer__address">
         <li class="footer__address__list"><strong>Adress:</strong></li>
-        <li class="footer__address__list">Gustavslundsvägen 151D</li>
+        <li class="footer__address__list">Gustavslundsvägen 151 D</li>
         <li class="footer__address__list">167 51 Bromma</li>
       </ul>
       <ul class="footer__contact">

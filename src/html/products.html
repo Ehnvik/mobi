@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../ts/main.ts" defer type="module"></script>
+    <script src="../ts/products.ts" defer type="module"></script>
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
@@ -27,18 +27,13 @@
           <span class="menu__container__button"></span>
         </label>
         <ul class="menu__list">
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Alla Produkter</a>
-          </li>
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Kontakt</a>
-          </li>
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Om oss</a>
-          </li>
+          <li id="all-products" class="menu__list__link">Alla Produkter</li>
+          <li id="iPhone" class="menu__list__link">iPhone</li>
+          <li id="samsung" class="menu__list__link">Samsung</li>
+          <li id="huawei" class="menu__list__link">Huawei</li>
         </ul>
         <div class="menu__bag-box">
-          <a class="menu__bag-box__anchor" href="../index.html"
+          <a class="menu__bag-box__anchor" href="#"
             ><i class="menu__bag-box__anchor--logo fa-solid fa-briefcase"></i
           ></a>
         </div>
@@ -46,45 +41,12 @@
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <div class="checkout">
-      <h3 class="checkout__header">Leveransuppgifter</h3>
-      <div class="checkout__container">
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Namn" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Mobilnummer" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="E-post" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Gata" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Postnummer" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Stad" />
-        <input
-          class="checkout__container__input"
-          type="text"
-          placeholder="Kortuppgifter" />
-      </div>
-      <button class="checkout__button" type="submit">Beställ</button>
-    </div>
+    <main id="products" class="products"></main>
 
     <footer class="footer">
       <ul class="footer__address">
         <li class="footer__address__list"><strong>Adress:</strong></li>
-        <li class="footer__address__list">Gustavslundsvägen 151 D</li>
+        <li class="footer__address__list">Gustavslundsvägen 151D</li>
         <li class="footer__address__list">167 51 Bromma</li>
       </ul>
       <ul class="footer__contact">
