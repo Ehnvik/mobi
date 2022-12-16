@@ -15,7 +15,6 @@
     @include c.small {
       width: 23%;
       margin: 10px 5px;
-      cursor: pointer;
       animation-name: projects-load;
       animation-duration: var(--projects-load-time);
       animation-timing-function: ease-in;
@@ -43,6 +42,7 @@
       box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
         0px 10px 5px rgba(151, 149, 149, 0.1);
       border-radius: 18px;
+      cursor: pointer;
 
       @include c.small {
         max-height: 150px;
