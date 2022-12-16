@@ -168,7 +168,7 @@ export const products: IProducts[] = [
   {
     brand: "samsung",
     name: "samsung 1",
-    description: "INTENSE till galaxy s20",
+    description: "INTENSE till galaxy S20",
     price: 595,
     amount: 1,
     colors: ["black", "green", "pink"],
@@ -182,7 +182,7 @@ export const products: IProducts[] = [
   {
     brand: "samsung",
     name: "samsung 2",
-    description: "THUNDER MARBLE till galaxy s20",
+    description: "THUNDER MARBLE till galaxy S20",
     price: 695,
     amount: 1,
     colors: ["black", "gold", "white"],
@@ -442,7 +442,7 @@ export const products: IProducts[] = [
   {
     brand: "huawei",
     name: "huawei 9",
-    description: "Scanic For Huawei P40",
+    description: "Scanic till Huawei P40",
     price: 895,
     amount: 1,
     colors: ["black", "gold", "pink"],
