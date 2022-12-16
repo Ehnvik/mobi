@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../ts/products.ts" defer type="module"></script>
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
-    <script src="./ts/main.ts" defer type="module"></script>
-    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="../scss/main.scss" />
     <title>Mobi Mobilskal</title>
   </head>
   <body>
     <header>
       <nav class="menu">
         <div class="menu__mobi-container">
-          <a href="index.html">
+          <a href="../index.html">
             <img
               class="menu__mobi-container--logo"
-              src="./assets/img/logo.png"
+              src="../assets/img/logo.png"
               alt="Mobi logo"
           /></a>
         </div>
@@ -27,26 +27,13 @@
           <span class="menu__container__button"></span>
         </label>
         <ul class="menu__list">
-          <li class="menu__list__link">
-            <a
-              id="products"
-              class="menu__list__link__anchor"
-              href="./html/products.html"
-              >Produkter</a
-            >
-          </li>
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">iPhone</a>
-          </li>
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Samsung</a>
-          </li>
-          <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Huawei</a>
-          </li>
+          <li id="all-products" class="menu__list__link">Alla Produkter</li>
+          <li id="iPhone" class="menu__list__link">iPhone</li>
+          <li id="samsung" class="menu__list__link">Samsung</li>
+          <li id="huawei" class="menu__list__link">Huawei</li>
         </ul>
         <div class="menu__bag-box">
-          <a class="menu__bag-box__anchor" href="index.html"
+          <a class="menu__bag-box__anchor" href="#"
             ><i class="menu__bag-box__anchor--logo fa-solid fa-briefcase"></i
           ></a>
         </div>
@@ -54,26 +41,12 @@
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <main class="hero">
-      <div class="hero__container">
-        <h1 class="hero__container__title">Mobi mobilskal för alla</h1>
-        <h2 class="hero__container__second-title">
-          Upptäck de senaste mobilskalen till de bästa priserna
-        </h2>
-
-        <a
-          id="all-products-link-button"
-          class="hero__container__link"
-          href="./html/products.html">
-          <button class="hero__container__link__btn">Handla</button>
-        </a>
-      </div>
-    </main>
+    <main id="products" class="products"></main>
 
     <footer class="footer">
       <ul class="footer__address">
         <li class="footer__address__list"><strong>Adress:</strong></li>
-        <li class="footer__address__list">Gustavslundsvägen 151 D</li>
+        <li class="footer__address__list">Gustavslundsvägen 151D</li>
         <li class="footer__address__list">167 51 Bromma</li>
       </ul>
       <ul class="footer__contact">
