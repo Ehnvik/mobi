@@ -4,6 +4,7 @@ export const products: IProducts[] = [
   // Iphone
   {
     brand: "iphone",
+    id: "1",
     name: "iphone 1",
     description: "Silikonskal med MagSafe till iPhone 14 Pro Max",
     price: 595,
@@ -18,6 +19,7 @@ export const products: IProducts[] = [
 
   {
     brand: "iphone",
+    id: "2",
     name: "iphone 2",
     description:
       "OtterBox Figura Series-skal med MagSafe till iPhone 14 Pro Max",
@@ -32,6 +34,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "1",
     name: "iphone 3",
     description: "OtterBox Aneu Series-skal med MagSafe till iPhone 13 Pro Max",
     price: 695,
@@ -45,6 +48,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "3",
     name: "iphone 4",
     description:
       "OtterBox Lumen Series-skal med MagSafe till iPhone 13 Pro Max",
@@ -59,6 +63,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "4",
     name: "iphone 5",
     description:
       "OtterBox Core Series-skal till iPhone 14 Pro Max (MagSafe-kompatibelt)",
@@ -73,6 +78,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "6",
     name: "iphone 6",
     description: "Läderfodral till iPhone 11 Pro Max",
     price: 595,
@@ -86,6 +92,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "2",
     name: "iphone 7",
     description: "Custom Phone Case till iphone 13 pro max",
     price: 695,
@@ -99,6 +106,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "7",
     name: "iphone 8",
     description: "SAGE till iphone 14 pro max",
     price: 495,
@@ -112,6 +120,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "8",
     name: "iphone 9",
     description: "BRAIDED ONYX till iphone 13 pro max",
     price: 695,
@@ -125,6 +134,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "5",
     name: "iphone 10",
     description: "Printed Case till iphone 14 pro max",
     price: 595,
@@ -138,6 +148,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "4",
     name: "iphone 11",
     description: "AZURA till iphone 13 pro",
     price: 695,
@@ -151,6 +162,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "iphone",
+    id: "5",
     name: "iphone 12",
     description: "SATIN till iphone 11 pro max",
     price: 595,
@@ -167,6 +179,7 @@ export const products: IProducts[] = [
 
   {
     brand: "samsung",
+    id: "7",
     name: "samsung 1",
     description: "INTENSE till galaxy S20",
     price: 595,
@@ -181,6 +194,7 @@ export const products: IProducts[] = [
 
   {
     brand: "samsung",
+    id: "9",
     name: "samsung 2",
     description: "THUNDER MARBLE till galaxy S20",
     price: 695,
@@ -195,6 +209,7 @@ export const products: IProducts[] = [
 
   {
     brand: "samsung",
+    id: "10",
     name: "samsung 3",
     description: "THUNDER MARBLE till Galaxy S22 Ultra",
     price: 495,
@@ -208,6 +223,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "11",
     name: "samsung 4",
     description: "SMOKE till Galaxy S10+",
     price: 695,
@@ -221,6 +237,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "7",
     name: "samsung 5",
     description: "BRAIDED ONYX till Galaxy S20+",
     price: 595,
@@ -234,6 +251,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "7",
     name: "samsung 6",
     description: "METAL WOODS till Galaxy S21 Ultra",
     price: 695,
@@ -247,6 +265,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "7",
     name: "samsung 7",
     description: "GLOSSY till Galaxy S20",
     price: 495,
@@ -260,6 +279,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "5",
     name: "samsung 8",
     description: "THUNDER MARBLE till Galaxy S21+",
     price: 695,
@@ -273,6 +293,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "7",
     name: "samsung 9",
     description: "METAL till Galaxy S20",
     price: 595,
@@ -286,6 +307,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "11",
     name: "samsung 10",
     description: "SANDSTORM MARBLE till galaxy s10",
     price: 695,
@@ -299,6 +321,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "12",
     name: "samsung 11",
     description: "SAND MARBLE till Galaxy S20 Ultra",
     price: 695,
@@ -312,6 +335,7 @@ export const products: IProducts[] = [
   },
   {
     brand: "samsung",
+    id: "10",
     name: "samsung 12",
     description: "Emerald Satin till Galaxy S20",
     price: 595,
@@ -328,6 +352,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "13",
     name: "huawei 1",
     description: "SANDSTORM MARBLE till huawei P50 pro",
     price: 495,
@@ -342,6 +367,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "14",
     name: "huawei 2",
     description: "Wallet Magnetic till Huawei Enjoy 50",
     price: 395,
@@ -356,6 +382,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "1",
     name: "huawei 3",
     description: "THUNDER MARBLE till Huawei P40 Pro",
     price: 795,
@@ -370,6 +397,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "8",
     name: "huawei 4",
     description: "CaseMe Luxury Vintage Matte Leather till Huawei P50",
     price: 295,
@@ -384,6 +412,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "1",
     name: "huawei 5",
     description:
       "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
@@ -399,6 +428,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "15",
     name: "huawei 6",
     description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
     price: 795,
@@ -413,6 +443,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "16",
     name: "huawei 7",
     description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
     price: 695,
@@ -427,6 +458,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "14",
     name: "huawei 8",
     description: "SMOKE till Huawei P20",
     price: 595,
@@ -441,6 +473,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "11",
     name: "huawei 9",
     description: "Scanic till Huawei P40",
     price: 895,
@@ -455,6 +488,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "1",
     name: "huawei 10",
     description: "BRAIDED ONYX till Huawei P30",
     price: 595,
@@ -469,6 +503,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "17",
     name: "huawei 11",
     description: "SAGE till  Huawei P40",
     price: 495,
@@ -483,6 +518,7 @@ export const products: IProducts[] = [
 
   {
     brand: "huawei",
+    id: "18",
     name: "huawei 12",
     description: "AUX till Huawei P30 Lite",
     price: 995,

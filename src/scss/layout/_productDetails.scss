@@ -1,38 +1,99 @@
-.product-details-container {
-  height: 83vh;
+@use "../components/" as c;
 
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+  margin-top: 40px;
+  padding: 0px 10px;
+  font-family: c.$titleFont;
   &__product-img {
+    max-height: 250px;
+    max-width: 250px;
+    box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
+      0px 10px 5px rgba(151, 149, 149, 0.1);
+    border-radius: 18px;
   }
   &__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
     &__description {
+      text-align: center;
     }
 
     &__price {
+      font-size: 18px;
+      width: 25%;
+      text-align: center;
+      width: 150px;
+      margin-top: 0;
+      margin-bottom: 25px;
     }
 
     &__container-colors {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 120px;
+      margin-bottom: 15px;
       &__first-color {
+        font-size: 32px;
+        cursor: pointer;
       }
 
       &__second-color {
+        font-size: 32px;
+        cursor: pointer;
       }
 
       &__third-color {
+        font-size: 32px;
+        cursor: pointer;
       }
     }
 
     &__amount-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 45px;
       &__amount-number {
+        font-weight: 600;
+        font-size: 18px;
       }
 
       &__subtract-icon {
+        font-size: 25px;
+        cursor: pointer;
       }
 
       &__addition-icon {
+        font-size: 25px;
+        cursor: pointer;
       }
     }
 
     &__shop-button {
+      background-color: #5c7e96;
+      font-size: 16px;
+      color: white;
+      width: 150px;
+      height: 40px;
+      font-family: c.$primaryFont;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 }
