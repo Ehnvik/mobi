@@ -17,7 +17,7 @@
     "dotenv": "^16.0.3"
   },
   "scripts": {
-    "start": "npx parcel src/index.html --no-cache"
+    "start": "npx parcel src/index.html src/html/checkout.html src/html/product-details.html src/html/products.html --no-cache"
   },
   "staticFiles": {
     "staticPath": "src/assets/img",

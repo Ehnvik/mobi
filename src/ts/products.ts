@@ -34,6 +34,11 @@ function createHtml(products: IProducts[]) {
       productImg.setAttribute("alt", "mobilskal");
     });
 
+    productImg.addEventListener("click", () => {
+      window.location.href = "product-details.html";
+      sendProductDetailsToLs(product);
+    });
+
     productInfo.innerHTML = product.description;
 
     let priceText: string = product.price.toString();
@@ -126,3 +131,7 @@ function emptyLS() {
   }
 }
 emptyLS();
+
+function sendProductDetailsToLs(product: IProducts) {
+  localStorage.setItem("productDetails", JSON.stringify(product));
+}
