@@ -1,3 +1,38 @@
 .product-details-container {
-  height: 80vh;
+  height: 83vh;
+
+  &__product-img {
+  }
+  &__info-container {
+    &__description {
+    }
+
+    &__price {
+    }
+
+    &__container-colors {
+      &__first-color {
+      }
+
+      &__second-color {
+      }
+
+      &__third-color {
+      }
+    }
+
+    &__amount-container {
+      &__amount-number {
+      }
+
+      &__subtract-icon {
+      }
+
+      &__addition-icon {
+      }
+    }
+
+    &__shop-button {
+    }
+  }
 }
