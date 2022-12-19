@@ -13,10 +13,11 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let mainContainer: HTMLDivElement = document.getElementById(
     "mainProductDetails"
   ) as HTMLDivElement;
-  let imageContainer: HTMLImageElement = document.createElement("img");
-  let descriptionContainer: HTMLDivElement = document.createElement("div");
+  let productImage: HTMLImageElement = document.createElement("img");
+  let productInfoContainer: HTMLDivElement = document.createElement("div");
   let caseDescription: HTMLHeadingElement = document.createElement("h5");
   let price: HTMLParagraphElement = document.createElement("p");
+  let containerColors: HTMLDivElement = document.createElement("div");
   let firstColor: HTMLDivElement = document.createElement("div");
   let secondColor: HTMLDivElement = document.createElement("div");
   let thirdColor: HTMLDivElement = document.createElement("div");
@@ -27,32 +28,63 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let shopButton: HTMLButtonElement = document.createElement("button");
 
   mainContainer.classList.add("product-details-container");
-  imageContainer.classList.add("product-details-container__product");
-  descriptionContainer.classList.add("product-details-container__description");
-  caseDescription.classList.add("product-details-container__price");
-  price.classList.add("product-details-container__price");
-  firstColor.classList.add("product-details-container__first-color");
-  secondColor.classList.add("product-details-container__second-color");
-  thirdColor.classList.add("product-details-container__third-color");
-  amountContainer.classList.add("product-details-container__amount-container");
-  amountNumber.classList.add("product-details-container__amount-number");
-  subtractIcon.classList.add("product-details-container__subtract-icon");
-  additionIcon.classList.add("product-details-container__addition-icon");
-  shopButton.classList.add("product-details-container__shop-button");
+  productImage.classList.add("product-details-container__product-img");
+  productInfoContainer.classList.add(
+    "product-details-container__info-container"
+  );
+  caseDescription.classList.add(
+    "product-details-container__info-container__description"
+  );
+  price.classList.add("product-details-container__info-container__price");
 
-  mainContainer.appendChild(imageContainer);
-  mainContainer.appendChild(descriptionContainer);
+  containerColors.classList.add(
+    "product-details-container__info-container__container-colors"
+  );
 
-  descriptionContainer.appendChild(caseDescription);
-  descriptionContainer.appendChild(price);
-  descriptionContainer.appendChild(firstColor);
-  descriptionContainer.appendChild(secondColor);
-  descriptionContainer.appendChild(thirdColor);
-  descriptionContainer.appendChild(amountContainer);
+  firstColor.classList.add(
+    "product-details-container__info-container__container-colors__first-color"
+  );
+  secondColor.classList.add(
+    "product-details-container__info-container__container-colors__second-color"
+  );
+  thirdColor.classList.add(
+    "product-details-container__info-container__container-colors__third-color"
+  );
+  amountContainer.classList.add(
+    "product-details-container__info-container__amount-container"
+  );
+  amountNumber.classList.add(
+    "product-details-container__info-container__amount-container__amount-number"
+  );
+  subtractIcon.classList.add(
+    "product-details-container__info-container__amount-container__subtract-icon"
+  );
+  additionIcon.classList.add(
+    "product-details-container__info-container__amount-container__addition-icon"
+  );
+  shopButton.classList.add(
+    "product-details-container__info-container__shop-button"
+  );
 
-  amountContainer.appendChild(amountNumber);
+  productDetails.imageUrls.forEach((image: string) => {
+    productImage.src = image;
+    productImage.setAttribute("alt", "mobilskal");
+  });
+
+  mainContainer.appendChild(productImage);
+  mainContainer.appendChild(productInfoContainer);
+
+  productInfoContainer.appendChild(caseDescription);
+  productInfoContainer.appendChild(price);
+  productInfoContainer.appendChild(containerColors);
+  containerColors.appendChild(firstColor);
+  containerColors.appendChild(secondColor);
+  containerColors.appendChild(thirdColor);
+  productInfoContainer.appendChild(amountContainer);
+
   amountContainer.appendChild(subtractIcon);
+  amountContainer.appendChild(amountNumber);
   amountContainer.appendChild(additionIcon);
 
-  descriptionContainer.appendChild(shopButton);
+  productInfoContainer.appendChild(shopButton);
 }
