@@ -19,9 +19,9 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let caseDescription: HTMLHeadingElement = document.createElement("h3");
   let price: HTMLParagraphElement = document.createElement("p");
   let containerColors: HTMLDivElement = document.createElement("div");
-  let firstColor: HTMLDivElement = document.createElement("div");
-  let secondColor: HTMLDivElement = document.createElement("div");
-  let thirdColor: HTMLDivElement = document.createElement("div");
+
+  // let secondColor: HTMLDivElement = document.createElement("div");
+  // let thirdColor: HTMLDivElement = document.createElement("div");
   let amountContainer: HTMLDivElement = document.createElement("div");
   let amountNumber: HTMLParagraphElement = document.createElement("p");
   let subtractIcon: HTMLDivElement = document.createElement("div");
@@ -42,15 +42,12 @@ function createProductDetailsHtml(productDetails: IProducts) {
     "product-details-container__info-container__container-colors"
   );
 
-  firstColor.classList.add(
-    "product-details-container__info-container__container-colors__first-color"
-  );
-  secondColor.classList.add(
-    "product-details-container__info-container__container-colors__second-color"
-  );
-  thirdColor.classList.add(
-    "product-details-container__info-container__container-colors__third-color"
-  );
+  // secondColor.classList.add(
+  //   "product-details-container__info-container__container-colors__second-color"
+  // );
+  // thirdColor.classList.add(
+  //   "product-details-container__info-container__container-colors__third-color"
+  // );
   amountContainer.classList.add(
     "product-details-container__info-container__amount-container"
   );
@@ -77,11 +74,14 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let priceText: string = productDetails.price.toString();
   price.innerHTML = priceText + " kr";
 
-  productDetails.colors.forEach((color: string) => {});
-
-  firstColor.innerHTML = `<i class="fa-regular fa-circle"></i>`;
-  secondColor.innerHTML = `<i class="fa-regular fa-circle"></i>`;
-  thirdColor.innerHTML = `<i class="fa-regular fa-circle"></i>`;
+  productDetails.colors.forEach((color: string) => {
+    let firstColor: HTMLDivElement = document.createElement("div");
+    firstColor.classList.add(
+      "product-details-container__info-container__container-colors__first-color"
+    );
+    firstColor.innerHTML = `<i class="fa-solid fa-circle ${color}"></i>`;
+    containerColors.appendChild(firstColor);
+  });
 
   subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
   amountNumber.innerHTML = "1";
@@ -91,18 +91,12 @@ function createProductDetailsHtml(productDetails: IProducts) {
 
   mainContainer.appendChild(productImage);
   mainContainer.appendChild(productInfoContainer);
-
   productInfoContainer.appendChild(caseDescription);
   productInfoContainer.appendChild(price);
   productInfoContainer.appendChild(containerColors);
-  containerColors.appendChild(firstColor);
-  containerColors.appendChild(secondColor);
-  containerColors.appendChild(thirdColor);
   productInfoContainer.appendChild(amountContainer);
-
   amountContainer.appendChild(subtractIcon);
   amountContainer.appendChild(amountNumber);
   amountContainer.appendChild(additionIcon);
-
   productInfoContainer.appendChild(shopButton);
 }
