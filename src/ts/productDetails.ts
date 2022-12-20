@@ -42,12 +42,6 @@ function createProductDetailsHtml(productDetails: IProducts) {
     "product-details-container__info-container__container-colors"
   );
 
-  // secondColor.classList.add(
-  //   "product-details-container__info-container__container-colors__second-color"
-  // );
-  // thirdColor.classList.add(
-  //   "product-details-container__info-container__container-colors__third-color"
-  // );
   amountContainer.classList.add(
     "product-details-container__info-container__amount-container"
   );
@@ -64,10 +58,10 @@ function createProductDetailsHtml(productDetails: IProducts) {
     "product-details-container__info-container__shop-button"
   );
 
-  productDetails.imageUrls.forEach((image: string) => {
-    productImage.src = image;
-    productImage.setAttribute("alt", "mobilskal");
-  });
+  // productDetails.imageUrls.forEach((image: string) => {
+  //   productImage.src = image;
+  //   productImage.setAttribute("alt", "mobilskal");
+  // });
 
   caseDescription.innerHTML = productDetails.description;
 
@@ -81,6 +75,17 @@ function createProductDetailsHtml(productDetails: IProducts) {
     );
     firstColor.innerHTML = `<i class="fa-solid fa-circle ${color}"></i>`;
     containerColors.appendChild(firstColor);
+
+    productDetails.imageUrls.forEach((image: string) => {
+      productImage.src = image;
+      productImage.setAttribute("alt", "mobilskal");
+      firstColor.addEventListener("click", () => {
+        if (image.match(color)) {
+          productImage.src = image;
+          productImage.setAttribute("alt", "mobilskal");
+        }
+      });
+    });
   });
 
   subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
