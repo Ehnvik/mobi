@@ -1,5 +1,4 @@
 import { IProducts } from "./models/IProducts";
-import { colors } from "./products/colors";
 
 function getProductDetailsFromLs() {
   let productDetails: IProducts = JSON.parse(
