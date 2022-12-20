@@ -19,9 +19,6 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let caseDescription: HTMLHeadingElement = document.createElement("h3");
   let price: HTMLParagraphElement = document.createElement("p");
   let containerColors: HTMLDivElement = document.createElement("div");
-
-  // let secondColor: HTMLDivElement = document.createElement("div");
-  // let thirdColor: HTMLDivElement = document.createElement("div");
   let amountContainer: HTMLDivElement = document.createElement("div");
   let amountNumber: HTMLParagraphElement = document.createElement("p");
   let subtractIcon: HTMLDivElement = document.createElement("div");
@@ -57,11 +54,6 @@ function createProductDetailsHtml(productDetails: IProducts) {
   shopButton.classList.add(
     "product-details-container__info-container__shop-button"
   );
-
-  // productDetails.imageUrls.forEach((image: string) => {
-  //   productImage.src = image;
-  //   productImage.setAttribute("alt", "mobilskal");
-  // });
 
   caseDescription.innerHTML = productDetails.description;
 
