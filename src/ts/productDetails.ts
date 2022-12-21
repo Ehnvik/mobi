@@ -60,8 +60,8 @@ function createProductDetailsHtml(productDetails: IProduct) {
   let priceText: string = productDetails.price.toString();
   price.innerHTML = priceText + " kr";
 
-  let selectedColor: string = "";
-  let selectedImage: string = "";
+  let selectedColor: string = productDetails.colors[2];
+  let selectedImage: string = productDetails.imageUrls[2];
   let selectedAmount: number = 1;
 
   productDetails.colors.forEach((color: string) => {
@@ -114,6 +114,7 @@ function createProductDetailsHtml(productDetails: IProduct) {
       selectedImage,
       selectedAmount
     );
+    sendToLs();
   });
 
   mainContainer.appendChild(productImage);
@@ -128,7 +129,9 @@ function createProductDetailsHtml(productDetails: IProduct) {
   productInfoContainer.appendChild(shopButton);
 }
 
-let selectedProductList: CartItem[] = [];
+let selectedProductList: CartItem[] = JSON.parse(
+  localStorage.getItem("shoppingCart") || "[]"
+);
 
 function newProductObject(
   product: IProduct,
@@ -138,7 +141,6 @@ function newProductObject(
 ) {
   let selectedProduct = new CartItem(product, color, image, amount);
   selectedProductList.push(selectedProduct);
-  sendToLs();
 }
 
 function sendToLs() {
