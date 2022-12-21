@@ -1,7 +1,8 @@
-import { IProducts } from "./models/IProducts";
+import { IProduct } from "./models/IProduct";
+import { CartItem } from "./models/CartItem";
 
 function getProductDetailsFromLs() {
-  let productDetails: IProducts = JSON.parse(
+  let productDetails: IProduct = JSON.parse(
     localStorage.getItem("productDetails") || "[]"
   );
   createProductDetailsHtml(productDetails);
@@ -9,7 +10,7 @@ function getProductDetailsFromLs() {
 
 getProductDetailsFromLs();
 
-function createProductDetailsHtml(productDetails: IProducts) {
+function createProductDetailsHtml(productDetails: IProduct) {
   let mainContainer: HTMLDivElement = document.getElementById(
     "mainProductDetails"
   ) as HTMLDivElement;
@@ -59,6 +60,10 @@ function createProductDetailsHtml(productDetails: IProducts) {
   let priceText: string = productDetails.price.toString();
   price.innerHTML = priceText + " kr";
 
+  let selectedColor: string = "";
+  let selectedImage: string = "";
+  let selectedAmount: number = 1;
+
   productDetails.colors.forEach((color: string) => {
     let firstColor: HTMLDivElement = document.createElement("div");
     firstColor.classList.add(
@@ -74,16 +79,42 @@ function createProductDetailsHtml(productDetails: IProducts) {
         if (image.match(color)) {
           productImage.src = image;
           productImage.setAttribute("alt", "mobilskal");
+          selectedColor = color;
+          selectedImage = image;
         }
       });
     });
   });
+  let selectedAmountText: string = selectedAmount.toString();
+
+  additionIcon.addEventListener("click", () => {
+    selectedAmount++;
+    selectedAmountText = selectedAmount.toString();
+    amountNumber.innerHTML = selectedAmountText;
+  });
+
+  subtractIcon.addEventListener("click", () => {
+    if (selectedAmount > 1) {
+      selectedAmount--;
+      selectedAmountText = selectedAmount.toString();
+      amountNumber.innerHTML = selectedAmountText;
+    }
+  });
 
   subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
-  amountNumber.innerHTML = "1";
+  amountNumber.innerHTML = selectedAmountText;
   additionIcon.innerHTML = `<i class="fa-solid fa-circle-plus"></i>`;
 
   shopButton.innerHTML = "Lägg i varukorg";
+
+  shopButton.addEventListener("click", () => {
+    newProductObject(
+      productDetails,
+      selectedColor,
+      selectedImage,
+      selectedAmount
+    );
+  });
 
   mainContainer.appendChild(productImage);
   mainContainer.appendChild(productInfoContainer);
@@ -95,4 +126,21 @@ function createProductDetailsHtml(productDetails: IProducts) {
   amountContainer.appendChild(amountNumber);
   amountContainer.appendChild(additionIcon);
   productInfoContainer.appendChild(shopButton);
+}
+
+let selectedProductList: CartItem[] = [];
+
+function newProductObject(
+  product: IProduct,
+  color: string,
+  image: string,
+  amount: number
+) {
+  let selectedProduct = new CartItem(product, color, image, amount);
+  selectedProductList.push(selectedProduct);
+  sendToLs();
+}
+
+function sendToLs() {
+  localStorage.setItem("shoppingCart", JSON.stringify(selectedProductList));
 }

@@ -1,6 +1,6 @@
-import { IProducts } from "../models/IProducts";
+import { IProduct } from "../models/IProduct";
 
-export const products: IProducts[] = [
+export const products: IProduct[] = [
   // Iphone
   {
     brand: "iphone",
@@ -8,7 +8,6 @@ export const products: IProducts[] = [
     name: "iphone 1",
     description: "Silikonskal med MagSafe till iPhone 14 Pro Max",
     price: 595,
-    amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
       "/assets/img/iphone/iphone-1-black.jpg",
@@ -24,7 +23,6 @@ export const products: IProducts[] = [
     description:
       "OtterBox Figura Series-skal med MagSafe till iPhone 14 Pro Max",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "pink"],
     imageUrls: [
       "/assets/img/iphone/iphone-2-black.jpg",
@@ -38,7 +36,6 @@ export const products: IProducts[] = [
     name: "iphone 3",
     description: "OtterBox Aneu Series-skal med MagSafe till iPhone 13 Pro Max",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
       "/assets/img/iphone/iphone-3-black.jpg",
@@ -53,7 +50,6 @@ export const products: IProducts[] = [
     description:
       "OtterBox Lumen Series-skal med MagSafe till iPhone 13 Pro Max",
     price: 495,
-    amount: 1,
     colors: ["black", "blue", "orange"],
     imageUrls: [
       "/assets/img/iphone/iphone-4-black.jpg",
@@ -68,7 +64,6 @@ export const products: IProducts[] = [
     description:
       "OtterBox Core Series-skal till iPhone 14 Pro Max (MagSafe-kompatibelt)",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "white"],
     imageUrls: [
       "/assets/img/iphone/iphone-5-black.jpg",
@@ -82,7 +77,6 @@ export const products: IProducts[] = [
     name: "iphone 6",
     description: "Läderfodral till iPhone 11 Pro Max",
     price: 595,
-    amount: 1,
     colors: ["blue", "green", "purple"],
     imageUrls: [
       "/assets/img/iphone/iphone-6-blue.jpg",
@@ -96,7 +90,6 @@ export const products: IProducts[] = [
     name: "iphone 7",
     description: "Custom Phone Case till iphone 13 pro max",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "pink"],
     imageUrls: [
       "/assets/img/iphone/iphone-7-black.jpg",
@@ -110,7 +103,6 @@ export const products: IProducts[] = [
     name: "iphone 8",
     description: "SAGE till iphone 14 pro max",
     price: 495,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/iphone/iphone-8-black.jpg",
@@ -124,7 +116,6 @@ export const products: IProducts[] = [
     name: "iphone 9",
     description: "BRAIDED ONYX till iphone 13 pro max",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "brown"],
     imageUrls: [
       "/assets/img/iphone/iphone-9-black.jpg",
@@ -138,7 +129,6 @@ export const products: IProducts[] = [
     name: "iphone 10",
     description: "Printed Case till iphone 14 pro max",
     price: 595,
-    amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
       "/assets/img/iphone/iphone-10-black.jpg",
@@ -152,7 +142,6 @@ export const products: IProducts[] = [
     name: "iphone 11",
     description: "AZURA till iphone 13 pro",
     price: 695,
-    amount: 1,
     colors: ["black", "blue", "white"],
     imageUrls: [
       "/assets/img/iphone/iphone-11-black.jpg",
@@ -166,7 +155,6 @@ export const products: IProducts[] = [
     name: "iphone 12",
     description: "SATIN till iphone 11 pro max",
     price: 595,
-    amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
       "/assets/img/iphone/iphone-12-black.jpg",
@@ -183,7 +171,6 @@ export const products: IProducts[] = [
     name: "samsung 1",
     description: "INTENSE till galaxy S20",
     price: 595,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-1-black.jpg",
@@ -198,7 +185,6 @@ export const products: IProducts[] = [
     name: "samsung 2",
     description: "THUNDER MARBLE till galaxy S20",
     price: 695,
-    amount: 1,
     colors: ["black", "gold", "white"],
     imageUrls: [
       "/assets/img/samsung/samsung-2-black.jpg",
@@ -213,7 +199,6 @@ export const products: IProducts[] = [
     name: "samsung 3",
     description: "THUNDER MARBLE till Galaxy S22 Ultra",
     price: 495,
-    amount: 1,
     colors: ["black", "green", "white"],
     imageUrls: [
       "/assets/img/samsung/samsung-3-black.jpg",
@@ -227,7 +212,6 @@ export const products: IProducts[] = [
     name: "samsung 4",
     description: "SMOKE till Galaxy S10+",
     price: 695,
-    amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-4-black.jpg",
@@ -241,7 +225,6 @@ export const products: IProducts[] = [
     name: "samsung 5",
     description: "BRAIDED ONYX till Galaxy S20+",
     price: 595,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-5-black.jpg",
@@ -255,7 +238,6 @@ export const products: IProducts[] = [
     name: "samsung 6",
     description: "METAL WOODS till Galaxy S21 Ultra",
     price: 695,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-6-black.jpg",
@@ -269,7 +251,6 @@ export const products: IProducts[] = [
     name: "samsung 7",
     description: "GLOSSY till Galaxy S20",
     price: 495,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-7-black.jpg",
@@ -283,7 +264,6 @@ export const products: IProducts[] = [
     name: "samsung 8",
     description: "THUNDER MARBLE till Galaxy S21+",
     price: 695,
-    amount: 1,
     colors: ["black", "pink", "white"],
     imageUrls: [
       "/assets/img/samsung/samsung-8-black.jpg",
@@ -297,7 +277,6 @@ export const products: IProducts[] = [
     name: "samsung 9",
     description: "METAL till Galaxy S20",
     price: 595,
-    amount: 1,
     colors: ["black", "green", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-9-black.jpg",
@@ -311,7 +290,6 @@ export const products: IProducts[] = [
     name: "samsung 10",
     description: "SANDSTORM MARBLE till galaxy s10",
     price: 695,
-    amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
       "/assets/img/samsung/samsung-10-black.jpg",
@@ -325,7 +303,6 @@ export const products: IProducts[] = [
     name: "samsung 11",
     description: "SAND MARBLE till Galaxy S20 Ultra",
     price: 695,
-    amount: 1,
     colors: ["black", "gold", "green"],
     imageUrls: [
       "/assets/img/samsung/samsung-11-black.jpg",
@@ -339,7 +316,6 @@ export const products: IProducts[] = [
     name: "samsung 12",
     description: "Emerald Satin till Galaxy S20",
     price: 595,
-    amount: 1,
     colors: ["black", "green", "white"],
     imageUrls: [
       "/assets/img/samsung/samsung-12-black.jpg",
@@ -356,7 +332,7 @@ export const products: IProducts[] = [
     name: "huawei 1",
     description: "SANDSTORM MARBLE till huawei P50 pro",
     price: 495,
-    amount: 1,
+
     colors: ["brown", "green", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-1-brown.JPG",
@@ -371,7 +347,6 @@ export const products: IProducts[] = [
     name: "huawei 2",
     description: "Wallet Magnetic till Huawei Enjoy 50",
     price: 395,
-    amount: 1,
     colors: ["green", "purple", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-2-green.JPG",
@@ -386,7 +361,6 @@ export const products: IProducts[] = [
     name: "huawei 3",
     description: "THUNDER MARBLE till Huawei P40 Pro",
     price: 795,
-    amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-3-black.JPG",
@@ -401,7 +375,6 @@ export const products: IProducts[] = [
     name: "huawei 4",
     description: "CaseMe Luxury Vintage Matte Leather till Huawei P50",
     price: 295,
-    amount: 1,
     colors: ["black", "blue", "brown"],
     imageUrls: [
       "/assets/img/huawei/huawei-4-black.JPG",
@@ -417,7 +390,6 @@ export const products: IProducts[] = [
     description:
       "Plånbok Magnetic Flip Anti-drop Läderfodral till Huawei P40 Lite",
     price: 495,
-    amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-5-black.JPG",
@@ -432,7 +404,6 @@ export const products: IProducts[] = [
     name: "huawei 6",
     description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
     price: 795,
-    amount: 1,
     colors: ["black", "green", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-6-black.JPG",
@@ -447,7 +418,6 @@ export const products: IProducts[] = [
     name: "huawei 7",
     description: "Plånbok Läder Flip Fodral till Huawei P20 Pro",
     price: 695,
-    amount: 1,
     colors: ["blue", "gold", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-7-blue.JPG",
@@ -462,7 +432,6 @@ export const products: IProducts[] = [
     name: "huawei 8",
     description: "SMOKE till Huawei P20",
     price: 595,
-    amount: 1,
     colors: ["green", "purple", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-8-green.JPG",
@@ -477,7 +446,6 @@ export const products: IProducts[] = [
     name: "huawei 9",
     description: "Scanic till Huawei P40",
     price: 895,
-    amount: 1,
     colors: ["black", "gold", "pink"],
     imageUrls: [
       "/assets/img/huawei/huawei-9-black.JPG",
@@ -492,7 +460,6 @@ export const products: IProducts[] = [
     name: "huawei 10",
     description: "BRAIDED ONYX till Huawei P30",
     price: 595,
-    amount: 1,
     colors: ["black", "blue", "red"],
     imageUrls: [
       "/assets/img/huawei/huawei-10-black.JPG",
@@ -507,7 +474,6 @@ export const products: IProducts[] = [
     name: "huawei 11",
     description: "SAGE till  Huawei P40",
     price: 495,
-    amount: 1,
     colors: ["black", "brown", "pink"],
     imageUrls: [
       "/assets/img/huawei/huawei-11-black.JPG",
@@ -522,7 +488,6 @@ export const products: IProducts[] = [
     name: "huawei 12",
     description: "AUX till Huawei P30 Lite",
     price: 995,
-    amount: 1,
     colors: ["black", "blue", "green"],
     imageUrls: [
       "/assets/img/huawei/huawei-12-black.JPG",
