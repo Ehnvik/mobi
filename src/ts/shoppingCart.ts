@@ -20,10 +20,10 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let price: HTMLParagraphElement = document.createElement("p");
     let amountContainer: HTMLDivElement = document.createElement("div");
     let amountNumber: HTMLParagraphElement = document.createElement("p");
-    let subtractIcon: HTMLDivElement = document.createElement("div");
     let additionIcon: HTMLDivElement = document.createElement("div");
+    let subtractIcon: HTMLDivElement = document.createElement("div");
     let totalCost: HTMLHeadingElement = document.createElement("h3");
-    let shopButton: HTMLButtonElement = document.createElement("button");
+    let buyButton: HTMLButtonElement = document.createElement("button");
     let trashButton: HTMLDivElement = document.createElement("div");
 
     mainContainer.classList.add("cartItem-details-container");
@@ -38,10 +38,31 @@ function createCartItemhtml(cartItem: CartItem[]) {
       "cartItem-details-container__cart-info-container__case-price"
     );
 
+    amountContainer.classList.add(
+      "cartItem-details-container__info-container__amount-container"
+    );
+    amountNumber.classList.add(
+      "cartItem-details-container__info-container__amount-container__amount-number"
+    );
+    subtractIcon.classList.add(
+      "cartItem-details-container__info-container__amount-container__subtract-icon"
+    );
+    additionIcon.classList.add(
+      "cartItem-details-container__info-container__amount-container__addition-icon"
+    );
+    buyButton.classList.add(
+      "cartItem-details-container__info-container__buy-button"
+    );
+    totalCost.classList.add("cartItem-details-container__total-cost");
+    trashButton.classList.add("cartItem-details-container__trash-button");
+
     cartItem.product.imageUrls.forEach((image: string) => {
       imageContainer.src = image;
       imageContainer.setAttribute("alt", "mobilskal");
     });
+
+    let containerDescription: string = cartItem.product.description;
+    caseDescription.innerHTML = containerDescription;
 
     let amountText: number = cartItem.amount;
     amountNumber.innerHTML = amountText.toString();
@@ -49,14 +70,10 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let productPrice: string = cartItem.product.price.toString();
     price.innerHTML = productPrice + " kr";
 
-    let selectedColor: string = cartItem.product.colors[2];
-    let selectedImage: string = cartItem.product.imageUrls[2];
     let selectedAmount: number = 1;
-
     let selectedAmountText: string = selectedAmount.toString();
 
-    trashButton.innerHTML = `<i class="fa-solid fa-trash-xmark"></i>`;
-    trashButton.classList.add("icon");
+    trashButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
     additionIcon.addEventListener("click", () => {
       selectedAmount++;
@@ -72,22 +89,22 @@ function createCartItemhtml(cartItem: CartItem[]) {
       }
     });
 
-    subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
-    amountNumber.innerHTML = selectedAmountText;
     additionIcon.innerHTML = `<i class="fa-solid fa-circle-plus"></i>`;
+    amountNumber.innerHTML = selectedAmountText;
+    subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
 
-    shopButton.innerHTML = "Handla";
+    buyButton.innerHTML = "Handla";
 
     mainContainer.appendChild(imageContainer);
     mainContainer.appendChild(cartInfoContainer);
     cartInfoContainer.appendChild(caseDescription);
     cartInfoContainer.appendChild(price);
-    cartInfoContainer.appendChild(amountContainer);
-    amountContainer.appendChild(subtractIcon);
-    amountContainer.appendChild(amountNumber);
+    mainContainer.appendChild(amountContainer);
     amountContainer.appendChild(additionIcon);
+    amountContainer.appendChild(amountNumber);
+    amountContainer.appendChild(subtractIcon);
     mainContainer.appendChild(totalCost);
-    mainContainer.appendChild(shopButton);
+    cartInfoContainer.appendChild(buyButton);
     cartInfoContainer.appendChild(trashButton);
   });
 }
