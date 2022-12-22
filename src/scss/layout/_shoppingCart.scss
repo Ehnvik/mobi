@@ -1,56 +1,102 @@
 @use "../components/" as c;
 
-.cartItem-details-container {
+.cartItem {
   display: flex;
-  justify-content: space-around;
-  height: 90vh;
-  margin-top: 40px;
-  padding: 0px 10px;
-  font-family: c.$titleFont;
-
-  &__image {
-    max-width: 100px;
-    max-height: 150px;
-  }
-
-  &__cart-info-container {
-    &__case-description {
-      width: 60%;
-      margin-top: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+  &__details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: c.$titleFont;
+    width: 90%;
+    box-shadow: 1px 0px 20px rgba(151, 149, 149, 0.8),
+      0px 10px 5px rgba(151, 149, 149, 0.1);
+    border-radius: 18px;
+    margin: 20px 0px;
+    padding: 0px 10px;
+    border-radius: 18px;
+    height: 180px;
+    @include c.small {
+      width: 40%;
+    }
+    @include c.xLarge {
+      width: 30%;
     }
 
-    &__case-price {
+    &__image {
+      max-width: 100px;
+      max-height: 150px;
     }
-  }
 
-  &__info-container {
-    &__amount-container {
-      &__amount-number {
-        text-align: center;
+    &__cart-info-container {
+      width: 100%;
+      padding-left: 10px;
+      &__case-description {
+        width: 80%;
+        margin-top: 0;
+        font-size: 18px;
       }
 
-      &__subtract-icon {
+      &__case-price {
+      }
+    }
+
+    &__amount-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 90%;
+      padding-right: 10px;
+      &__amount-number {
+        text-align: center;
+        font-size: 18px;
+        margin: 5px;
       }
 
       &__addition-icon {
+        font-size: 22px;
+      }
+
+      &__subtract-icon {
+        font-size: 22px;
+      }
+      &__trash-button {
+        font-size: 22px;
+        cursor: pointer;
+        &:hover {
+          color: rgb(181, 3, 3);
+        }
       }
     }
+  }
 
-    &__buy-button {
-      width: 160px;
-      height: 30px;
-      background-color: #5c7e96;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+  &__total-price {
+    font-family: c.$primaryFont;
+    font-size: 25px;
+    margin-top: auto;
+  }
+
+  &__button {
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #5c7e96;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 0px 10px rgba(151, 149, 149, 0.8);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.342);
+    margin-bottom: 15px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.65;
     }
-  }
-
-  &__total-cost {
-  }
-
-  &__trash-button {
   }
 }

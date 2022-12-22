@@ -14,6 +14,7 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let mainContainer: HTMLDivElement = document.getElementById(
       "shopping-cart"
     ) as HTMLDivElement;
+    let productContainer: HTMLDivElement = document.createElement("div");
     let imageContainer: HTMLImageElement = document.createElement("img");
     let cartInfoContainer: HTMLDivElement = document.createElement("div");
     let caseDescription: HTMLHeadingElement = document.createElement("h3");
@@ -22,39 +23,47 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let amountNumber: HTMLParagraphElement = document.createElement("p");
     let additionIcon: HTMLDivElement = document.createElement("div");
     let subtractIcon: HTMLDivElement = document.createElement("div");
-    let totalCost: HTMLHeadingElement = document.createElement("h3");
-    let buyButton: HTMLButtonElement = document.createElement("button");
     let trashButton: HTMLDivElement = document.createElement("div");
+    let totalPrice: HTMLParagraphElement = document.getElementById(
+      "totaltCost"
+    ) as HTMLParagraphElement;
+    let toCheckoutLink: HTMLAnchorElement = document.getElementById(
+      "toCheckoutlink"
+    ) as HTMLAnchorElement;
+    let toCheckoutButton: HTMLButtonElement = document.getElementById(
+      "toCheckoutButton"
+    ) as HTMLButtonElement;
 
-    mainContainer.classList.add("cartItem-details-container");
-    imageContainer.classList.add("cartItem-details-container__image");
+    mainContainer.classList.add("cartItem");
+    productContainer.classList.add("cartItem__details-container");
+    imageContainer.classList.add("cartItem__details-container__image");
     cartInfoContainer.classList.add(
-      "cartItem-details-container__cart-info-container"
+      "cartItem__details-container__cart-info-container"
     );
     caseDescription.classList.add(
-      "cartItem-details-container__cart-info-container__case-description"
+      "cartItem__details-container__cart-info-container__case-description"
     );
     price.classList.add(
-      "cartItem-details-container__cart-info-container__case-price"
+      "cartItem__details-container__cart-info-container__case-price"
     );
 
     amountContainer.classList.add(
-      "cartItem-details-container__info-container__amount-container"
+      "cartItem__details-container__amount-container"
     );
     amountNumber.classList.add(
-      "cartItem-details-container__info-container__amount-container__amount-number"
+      "cartItem__details-container__amount-container__amount-number"
     );
     subtractIcon.classList.add(
-      "cartItem-details-container__info-container__amount-container__subtract-icon"
+      "cartItem__details-container__amount-container__subtract-icon"
     );
     additionIcon.classList.add(
-      "cartItem-details-container__info-container__amount-container__addition-icon"
+      "cartItem__details-container__amount-container__addition-icon"
     );
-    buyButton.classList.add(
-      "cartItem-details-container__info-container__buy-button"
+    trashButton.classList.add(
+      "cartItem__details-container__amount-container__trash-button"
     );
-    totalCost.classList.add("cartItem-details-container__total-cost");
-    trashButton.classList.add("cartItem-details-container__trash-button");
+    totalPrice.classList.add("cartItem__total-price");
+    toCheckoutButton.classList.add("cartItem__button");
 
     cartItem.product.imageUrls.forEach((image: string) => {
       imageContainer.src = image;
@@ -93,18 +102,22 @@ function createCartItemhtml(cartItem: CartItem[]) {
     amountNumber.innerHTML = selectedAmountText;
     subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
 
-    buyButton.innerHTML = "Handla";
+    totalPrice.innerHTML = `Summa: 1568 kr`;
 
-    mainContainer.appendChild(imageContainer);
-    mainContainer.appendChild(cartInfoContainer);
+    toCheckoutButton.innerHTML = "Till kassan";
+
+    mainContainer.appendChild(productContainer);
+    productContainer.appendChild(imageContainer);
+    productContainer.appendChild(cartInfoContainer);
+    productContainer.appendChild(amountContainer);
     cartInfoContainer.appendChild(caseDescription);
     cartInfoContainer.appendChild(price);
-    mainContainer.appendChild(amountContainer);
     amountContainer.appendChild(additionIcon);
     amountContainer.appendChild(amountNumber);
     amountContainer.appendChild(subtractIcon);
-    mainContainer.appendChild(totalCost);
-    cartInfoContainer.appendChild(buyButton);
-    cartInfoContainer.appendChild(trashButton);
+    amountContainer.appendChild(trashButton);
+    mainContainer.appendChild(totalPrice);
+    mainContainer.appendChild(toCheckoutLink);
+    toCheckoutLink.appendChild(toCheckoutButton);
   });
 }
