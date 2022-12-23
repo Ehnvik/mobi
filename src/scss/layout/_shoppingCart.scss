@@ -60,10 +60,12 @@
 
       &__addition-icon {
         font-size: 22px;
+        cursor: pointer;
       }
 
       &__subtract-icon {
         font-size: 22px;
+        cursor: pointer;
       }
       &__trash-button {
         font-size: 22px;
@@ -98,5 +100,34 @@
     &:hover {
       opacity: 0.65;
     }
+  }
+}
+
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @include c.small {
+    height: 43vh;
+  }
+  &__header {
+    font-family: c.$titleFont;
+  }
+
+  &__text {
+    font-family: c.$primaryFont;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 1px;
+  }
+
+  &__info {
+    font-family: c.$primaryFont;
+    width: 60%;
+    text-align: center;
+    margin-top: 0;
   }
 }

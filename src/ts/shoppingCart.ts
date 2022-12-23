@@ -1,5 +1,18 @@
 import { CartItem } from "./models/CartItem";
 
+let mainContainer: HTMLDivElement = document.getElementById(
+  "shopping-cart"
+) as HTMLDivElement;
+let totalPrice: HTMLParagraphElement = document.getElementById(
+  "totaltCost"
+) as HTMLParagraphElement;
+let toCheckoutLink: HTMLAnchorElement = document.getElementById(
+  "toCheckoutlink"
+) as HTMLAnchorElement;
+let toCheckoutButton: HTMLButtonElement = document.getElementById(
+  "toCheckoutButton"
+) as HTMLButtonElement;
+
 function getCartItemFromLs() {
   let cartItem: CartItem[] = JSON.parse(
     localStorage.getItem("shoppingCart") || "[]"
@@ -11,9 +24,9 @@ getCartItemFromLs();
 
 function createCartItemhtml(cartItem: CartItem[]) {
   cartItem.forEach((cartItem: CartItem) => {
-    let mainContainer: HTMLDivElement = document.getElementById(
-      "shopping-cart"
-    ) as HTMLDivElement;
+    // let mainContainer: HTMLDivElement = document.getElementById(
+    //   "shopping-cart"
+    // ) as HTMLDivElement;
     let productContainer: HTMLDivElement = document.createElement("div");
     let imageContainer: HTMLImageElement = document.createElement("img");
     let cartInfoContainer: HTMLDivElement = document.createElement("div");
@@ -24,15 +37,15 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let additionIcon: HTMLDivElement = document.createElement("div");
     let subtractIcon: HTMLDivElement = document.createElement("div");
     let trashButton: HTMLDivElement = document.createElement("div");
-    let totalPrice: HTMLParagraphElement = document.getElementById(
-      "totaltCost"
-    ) as HTMLParagraphElement;
-    let toCheckoutLink: HTMLAnchorElement = document.getElementById(
-      "toCheckoutlink"
-    ) as HTMLAnchorElement;
-    let toCheckoutButton: HTMLButtonElement = document.getElementById(
-      "toCheckoutButton"
-    ) as HTMLButtonElement;
+    // let totalPrice: HTMLParagraphElement = document.getElementById(
+    //   "totaltCost"
+    // ) as HTMLParagraphElement;
+    // let toCheckoutLink: HTMLAnchorElement = document.getElementById(
+    //   "toCheckoutlink"
+    // ) as HTMLAnchorElement;
+    // let toCheckoutButton: HTMLButtonElement = document.getElementById(
+    //   "toCheckoutButton"
+    // ) as HTMLButtonElement;
 
     mainContainer.classList.add("cartItem");
     productContainer.classList.add("cartItem__details-container");
@@ -121,3 +134,33 @@ function createCartItemhtml(cartItem: CartItem[]) {
     toCheckoutLink.appendChild(toCheckoutButton);
   });
 }
+
+function emptyShoppingCart() {
+  if (
+    typeof localStorage["shoppingCart"] === "undefined" ||
+    localStorage["shoppingCart"] === "[]"
+  ) {
+    toCheckoutLink.style.display = "none";
+    let emptyCartContainer: HTMLDivElement = document.createElement("div");
+    let emptyCartHeader: HTMLHeadingElement = document.createElement("h3");
+    let emptyCartText: HTMLParagraphElement = document.createElement("p");
+    let emptyCartInfo: HTMLParagraphElement = document.createElement("p");
+
+    emptyCartContainer.classList.add("empty-cart-container");
+    emptyCartHeader.classList.add("empty-cart-container__header");
+    emptyCartText.classList.add("empty-cart-container__text");
+    emptyCartInfo.classList.add("empty-cart-container__info");
+
+    emptyCartHeader.innerHTML = "Varukorg";
+    emptyCartText.innerHTML = "Din varukorg är tom!";
+    emptyCartInfo.innerHTML =
+      "När du handlar hos oss får du alltid fri frakt och fri retur till butik.";
+
+    mainContainer.appendChild(emptyCartContainer);
+    emptyCartContainer.appendChild(emptyCartHeader);
+    emptyCartContainer.appendChild(emptyCartText);
+    emptyCartContainer.appendChild(emptyCartInfo);
+  }
+}
+
+emptyShoppingCart();
