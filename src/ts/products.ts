@@ -48,8 +48,6 @@ function createHtml(products: IProduct[]) {
     productContainer.appendChild(productImg);
     productContainer.appendChild(productInfo);
     productContainer.appendChild(productPrice);
-
-    productImg.addEventListener("click", () => {});
   });
 }
 

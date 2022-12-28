@@ -21,7 +21,13 @@
     border-radius: 18px;
     height: 180px;
     @include c.small {
+      width: 50%;
+    }
+    @include c.medium {
       width: 40%;
+    }
+    @include c.large {
+      width: 35%;
     }
     @include c.xLarge {
       width: 30%;
