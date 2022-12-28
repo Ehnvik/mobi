@@ -1,4 +1,11 @@
 import { CartItem } from "./models/CartItem";
+import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
+
+window.addEventListener("load", () => {
+  ifShoppingCartEmpty();
+});
+
+ifShoppingCartEmpty();
 
 let mainContainer: HTMLDivElement = document.getElementById(
   "shopping-cart"
@@ -24,9 +31,6 @@ getCartItemFromLs();
 
 function createCartItemhtml(cartItem: CartItem[]) {
   cartItem.forEach((cartItem: CartItem) => {
-    // let mainContainer: HTMLDivElement = document.getElementById(
-    //   "shopping-cart"
-    // ) as HTMLDivElement;
     let productContainer: HTMLDivElement = document.createElement("div");
     let imageContainer: HTMLImageElement = document.createElement("img");
     let cartInfoContainer: HTMLDivElement = document.createElement("div");
@@ -37,15 +41,6 @@ function createCartItemhtml(cartItem: CartItem[]) {
     let additionIcon: HTMLDivElement = document.createElement("div");
     let subtractIcon: HTMLDivElement = document.createElement("div");
     let trashButton: HTMLDivElement = document.createElement("div");
-    // let totalPrice: HTMLParagraphElement = document.getElementById(
-    //   "totaltCost"
-    // ) as HTMLParagraphElement;
-    // let toCheckoutLink: HTMLAnchorElement = document.getElementById(
-    //   "toCheckoutlink"
-    // ) as HTMLAnchorElement;
-    // let toCheckoutButton: HTMLButtonElement = document.getElementById(
-    //   "toCheckoutButton"
-    // ) as HTMLButtonElement;
 
     mainContainer.classList.add("cartItem");
     productContainer.classList.add("cartItem__details-container");

@@ -1,5 +1,12 @@
+import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
 import { IProduct } from "./models/IProduct";
 import { products } from "./products/products";
+
+window.addEventListener("load", () => {
+  ifShoppingCartEmpty();
+});
+
+ifShoppingCartEmpty();
 
 let container: HTMLDivElement = document.getElementById(
   "products"
