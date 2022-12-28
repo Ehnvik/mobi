@@ -152,7 +152,7 @@ function createCartItemhtml(cartItem: CartItem[]) {
   totalPrice.innerHTML = `Total summa: ${sumText} kr`;
 
   toCheckoutButton.innerHTML = "Till kassan";
-}
+} 
 
 function deleteProductFromCart(cartItem: CartItem[], item: CartItem) {
   let deletedProduct = cartItem.filter((listItem) => listItem != item);
@@ -173,25 +173,35 @@ function emptyShoppingCart() {
     localStorage["shoppingCart"] === "[]"
   ) {
     toCheckoutLink.style.display = "none";
+    totalPrice.style.display = "none";
     let emptyCartContainer: HTMLDivElement = document.createElement("div");
     let emptyCartHeader: HTMLHeadingElement = document.createElement("h3");
     let emptyCartText: HTMLParagraphElement = document.createElement("p");
     let emptyCartInfo: HTMLParagraphElement = document.createElement("p");
+    let emptyCartLink: HTMLAnchorElement = document.createElement("a")
+    let emptyCartButton: HTMLButtonElement = document.createElement("button")
 
     emptyCartContainer.classList.add("empty-cart-container");
     emptyCartHeader.classList.add("empty-cart-container__header");
     emptyCartText.classList.add("empty-cart-container__text");
     emptyCartInfo.classList.add("empty-cart-container__info");
+    emptyCartLink.classList.add("empty-cart-container__link")
+    emptyCartButton.classList.add("empty-cart-container__link__button")
 
-    emptyCartHeader.innerHTML = "Varukorg";
+    emptyCartHeader.innerHTML = "Oops!";
     emptyCartText.innerHTML = "Din varukorg är tom!";
     emptyCartInfo.innerHTML =
       "När du handlar hos oss får du alltid fri frakt och fri retur till butik.";
+      emptyCartLink.href = "./products.html"
+    emptyCartButton.innerHTML = "Till produkter"
 
     mainContainer.appendChild(emptyCartContainer);
     emptyCartContainer.appendChild(emptyCartHeader);
     emptyCartContainer.appendChild(emptyCartText);
     emptyCartContainer.appendChild(emptyCartInfo);
+    emptyCartContainer.appendChild(emptyCartLink);
+    emptyCartLink.appendChild(emptyCartButton);
+    
   }
 }
 
