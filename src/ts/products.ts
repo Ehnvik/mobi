@@ -1,12 +1,19 @@
-import { IProducts } from "./models/IProducts";
+import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
+import { IProduct } from "./models/IProduct";
 import { products } from "./products/products";
+
+window.addEventListener("load", () => {
+  ifShoppingCartEmpty();
+});
+
+ifShoppingCartEmpty();
 
 let container: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
 
-function createHtml(products: IProducts[]) {
-  products.forEach((product: IProducts) => {
+function createHtml(products: IProduct[]) {
+  products.forEach((product: IProduct) => {
     let productContainer: HTMLDivElement = document.createElement(
       "div"
     ) as HTMLDivElement;
@@ -48,8 +55,6 @@ function createHtml(products: IProducts[]) {
     productContainer.appendChild(productImg);
     productContainer.appendChild(productInfo);
     productContainer.appendChild(productPrice);
-
-    productImg.addEventListener("click", () => {});
   });
 }
 
@@ -72,7 +77,7 @@ let iphoneLink: HTMLLIElement = document.getElementById(
 
 iphoneLink.addEventListener("click", () => {
   container.innerHTML = "";
-  let iphoneList: IProducts[] = products.filter(
+  let iphoneList: IProduct[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "iphone"
   );
   // createHtml(iphoneList);
@@ -87,7 +92,7 @@ let samsungLink: HTMLLIElement = document.getElementById(
 
 samsungLink.addEventListener("click", () => {
   container.innerHTML = "";
-  let samsungList: IProducts[] = products.filter(
+  let samsungList: IProduct[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "samsung"
   );
   // createHtml(samsungList);
@@ -102,7 +107,7 @@ let huaweiLink: HTMLLIElement = document.getElementById(
 
 huaweiLink.addEventListener("click", () => {
   container.innerHTML = "";
-  let huaweiList: IProducts[] = products.filter(
+  let huaweiList: IProduct[] = products.filter(
     (newArrayOfObjects) => newArrayOfObjects.brand === "huawei"
   );
   // createHtml(huaweiList);
@@ -110,12 +115,12 @@ huaweiLink.addEventListener("click", () => {
   getFromLs();
 });
 
-function sendToLs(products: IProducts[]) {
+function sendToLs(products: IProduct[]) {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
 function getFromLs() {
-  let productList: IProducts[] = JSON.parse(
+  let productList: IProduct[] = JSON.parse(
     localStorage.getItem("products") || "[]"
   );
   createHtml(productList);
@@ -132,6 +137,6 @@ function emptyLS() {
 }
 emptyLS();
 
-function sendProductDetailsToLs(product: IProducts) {
+function sendProductDetailsToLs(product: IProduct) {
   localStorage.setItem("productDetails", JSON.stringify(product));
 }

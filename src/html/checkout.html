@@ -7,6 +7,7 @@
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
+    <script src="../ts/checkout.ts" defer type="module"></script>
     <link rel="stylesheet" href="../scss/main.scss" />
     <title>Mobi Mobilskal</title>
   </head>
@@ -44,15 +45,17 @@
           </li>
         </ul>
         <div class="menu__bag-box">
-          <a class="menu__bag-box__anchor" href="../index.html"
-            ><i class="menu__bag-box__anchor--logo fa-solid fa-briefcase"></i
+          <a class="menu__bag-box__anchor" href="./shopping-cart.html"
+            ><i
+              class="menu__bag-box__anchor--logo fa-solid fa-cart-shopping"></i>
+            <span id="amount-of-products-container"></span
           ></a>
         </div>
       </nav>
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <div class="checkout">
+    <div id="checkout" class="checkout">
       <h3 class="checkout__header">Leveransuppgifter</h3>
       <div class="checkout__container">
         <input
@@ -84,7 +87,9 @@
           type="text"
           placeholder="Kortuppgifter" />
       </div>
-      <button class="checkout__button" type="submit">Beställ</button>
+      <button id="checkoutButton" class="checkout__button" type="submit">
+        Beställ
+      </button>
     </div>
 
     <footer class="footer">

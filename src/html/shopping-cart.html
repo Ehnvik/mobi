@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../ts/productDetails.ts" defer type="module"></script>
-
+    <script src="../ts/shoppingCart.ts" defer type="module"></script>
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
@@ -48,10 +47,10 @@
             <a class="menu__list__link__anchor" href="#">Om oss</a>
           </li>
         </ul>
+
         <div class="menu__bag-box">
           <a class="menu__bag-box__anchor" href="./shopping-cart.html"
             ><i
-              id="menu__bag-box__anchor"
               class="menu__bag-box__anchor--logo fa-solid fa-cart-shopping"></i>
             <span id="amount-of-products-container"></span
           ></a>
@@ -60,7 +59,12 @@
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <main id="mainProductDetails"></main>
+    <main id="shopping-cart">
+      <a id="toCheckoutlink" href="./checkout.html">
+        <button type="button" id="toCheckoutButton">Till Kassan</button>
+      </a>
+      <p id="totaltCost"></p>
+    </main>
 
     <footer class="footer">
       <ul class="footer__address">

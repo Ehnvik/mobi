@@ -1,10 +1,9 @@
-export interface IProducts {
+export interface IProduct {
   brand: string;
   id: string;
   name: string;
   description: string;
   price: number;
-  amount: number;
   colors: string[];
   imageUrls: string[];
 }
