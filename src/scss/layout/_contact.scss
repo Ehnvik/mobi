@@ -1,7 +1,7 @@
 @use "../components/" as c;
 
 .contact {
-  background-color:  c.$secondaryBgColorOpacity;
+  background-color:  c.$primaryBgColor;
   display: flex;
   justify-content: center;
   align-items: center;
