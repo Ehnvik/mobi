@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
+    <script src="../ts/checkout.ts" defer type="module"></script>
     <link rel="stylesheet" href="../scss/main.scss" />
     <title>Mobi Mobilskal</title>
   </head>
@@ -53,39 +55,48 @@
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <div class="checkout">
+    <div id="checkout" class="checkout">
       <h3 class="checkout__header">Leveransuppgifter</h3>
       <div class="checkout__container">
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Namn" />
+          placeholder="Namn"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Mobilnummer" />
+          placeholder="Mobilnummer"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="E-post" />
+          placeholder="E-post"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Gata" />
+          placeholder="Gata"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Postnummer" />
+          placeholder="Postnummer"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Stad" />
+          placeholder="Stad"
+        />
         <input
           class="checkout__container__input"
           type="text"
-          placeholder="Kortuppgifter" />
+          placeholder="Kortuppgifter"
+        />
       </div>
-      <button class="checkout__button" type="submit">Beställ</button>
+      <button id="checkoutButton" class="checkout__button" type="submit">
+        Beställ
+      </button>
     </div>
 
     <footer class="footer">
@@ -108,25 +119,29 @@
         <li class="footer__socials__list">
           <a href="" class="footer__socials__list__link"
             ><i
-              class="footer__socials__list__link--linkedin fa-brands fa-linkedin"></i></a
+              class="footer__socials__list__link--linkedin fa-brands fa-linkedin"
+            ></i></a
           ><span>LinkedIn</span>
         </li>
         <li class="footer__socials__list">
           <a href="" class="footer__socials__list__link"
             ><i
-              class="footer__socials__list__link--facebook fa-brands fa-facebook"></i></a
+              class="footer__socials__list__link--facebook fa-brands fa-facebook"
+            ></i></a
           ><span>Facebook</span>
         </li>
         <li class="footer__socials__list">
           <a href="" class="footer__socials__list__link"
             ><i
-              class="footer__socials__list__link--instagram fa-brands fa-instagram"></i></a
+              class="footer__socials__list__link--instagram fa-brands fa-instagram"
+            ></i></a
           ><span>Instagram</span>
         </li>
         <li class="footer__socials__list">
           <a href="" class="footer__socials__list__link"
             ><i
-              class="footer__socials__list__link--twitter fa-brands fa-twitter"></i></a
+              class="footer__socials__list__link--twitter fa-brands fa-twitter"
+            ></i></a
           ><span>Twitter</span>
         </li>
       </ul>

@@ -1,5 +1,6 @@
 import { IProduct } from "./models/IProduct";
 import { CartItem } from "./models/CartItem";
+import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
 
 function getProductDetailsFromLs() {
   let productDetails: IProduct = JSON.parse(
@@ -114,8 +115,12 @@ function createProductDetailsHtml(productDetails: IProduct) {
       selectedImage,
       selectedAmount
     );
+
     sendToLs();
+    ifShoppingCartEmpty();
   });
+
+  ifShoppingCartEmpty();
 
   mainContainer.appendChild(productImage);
   mainContainer.appendChild(productInfoContainer);

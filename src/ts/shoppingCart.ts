@@ -1,9 +1,15 @@
 import { CartItem } from "./models/CartItem";
+import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
+
+window.addEventListener("load", () => {
+  ifShoppingCartEmpty();
+});
+
+ifShoppingCartEmpty();
 
 let mainContainer: HTMLDivElement = document.getElementById(
   "shopping-cart"
 ) as HTMLDivElement;
-
 let totalPrice: HTMLParagraphElement = document.getElementById(
   "totaltCost"
 ) as HTMLParagraphElement;
@@ -167,12 +173,25 @@ function emptyShoppingCart() {
     localStorage["shoppingCart"] === "[]"
   ) {
     toCheckoutLink.style.display = "none";
-    let emptyCartheader: HTMLHeadingElement = document.createElement("h3");
+    let emptyCartContainer: HTMLDivElement = document.createElement("div");
+    let emptyCartHeader: HTMLHeadingElement = document.createElement("h3");
     let emptyCartText: HTMLParagraphElement = document.createElement("p");
-    emptyCartheader.innerHTML = "Varukorg";
-    emptyCartText.innerHTML = "Din varukorg är tom";
-    mainContainer.appendChild(emptyCartheader);
-    mainContainer.appendChild(emptyCartText);
+    let emptyCartInfo: HTMLParagraphElement = document.createElement("p");
+
+    emptyCartContainer.classList.add("empty-cart-container");
+    emptyCartHeader.classList.add("empty-cart-container__header");
+    emptyCartText.classList.add("empty-cart-container__text");
+    emptyCartInfo.classList.add("empty-cart-container__info");
+
+    emptyCartHeader.innerHTML = "Varukorg";
+    emptyCartText.innerHTML = "Din varukorg är tom!";
+    emptyCartInfo.innerHTML =
+      "När du handlar hos oss får du alltid fri frakt och fri retur till butik.";
+
+    mainContainer.appendChild(emptyCartContainer);
+    emptyCartContainer.appendChild(emptyCartHeader);
+    emptyCartContainer.appendChild(emptyCartText);
+    emptyCartContainer.appendChild(emptyCartInfo);
   }
 }
 
