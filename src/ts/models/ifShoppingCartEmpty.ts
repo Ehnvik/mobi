@@ -26,18 +26,16 @@ export function ifShoppingCartEmpty() {
     localStorage["shoppingCart"] === "[]"
   ) {
     shoppingCartItem.style.color = "white";
-    console.log("white");
   } else {
     shoppingCartItem.style.color = "#5c7e96";
     shoppingCartItem.classList.add("shopping-cart__icon");
     shoppingCartItemAmount.classList.add("shopping-cart__amount");
+    let numbersOfProductsInCart = 0;
     for (let i = 0; i < cartItem.length; i++) {
-      let numbersOfProductsInCart = cartItem.length;
-      let numbersOfProductsInCartText: string =
-        numbersOfProductsInCart.toString();
-      shoppingCartItemAmount.innerHTML = numbersOfProductsInCartText;
+      numbersOfProductsInCart += cartItem[i].amount;
     }
-
-    console.log("blue");
+    let numbersOfProductsInCartText: string =
+      numbersOfProductsInCart.toString();
+    shoppingCartItemAmount.innerHTML = numbersOfProductsInCartText;
   }
 }

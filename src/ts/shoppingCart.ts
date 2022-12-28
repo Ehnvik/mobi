@@ -1,9 +1,6 @@
+import { newAmountOfProducts } from "./localStorageService";
 import { CartItem } from "./models/CartItem";
 import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
-
-window.addEventListener("load", () => {
-  ifShoppingCartEmpty();
-});
 
 ifShoppingCartEmpty();
 
@@ -95,6 +92,7 @@ function createCartItemhtml(cartItem: CartItem[]) {
       newAmountOfProducts(cartItem);
       mainContainer.innerHTML = "";
       getCartItemFromLs();
+      ifShoppingCartEmpty();
     });
 
     subtractIcon.addEventListener("click", () => {
@@ -113,6 +111,7 @@ function createCartItemhtml(cartItem: CartItem[]) {
       }
       mainContainer.innerHTML = "";
       getCartItemFromLs();
+      ifShoppingCartEmpty();
     });
 
     additionIcon.innerHTML = `<i class="fa-solid fa-circle-plus"></i>`;
@@ -152,20 +151,24 @@ function createCartItemhtml(cartItem: CartItem[]) {
   totalPrice.innerHTML = `Total summa: ${sumText} kr`;
 
   toCheckoutButton.innerHTML = "Till kassan";
-} 
+}
 
 function deleteProductFromCart(cartItem: CartItem[], item: CartItem) {
   let deletedProduct = cartItem.filter((listItem) => listItem != item);
   localStorage.setItem("shoppingCart", JSON.stringify(deletedProduct));
+  ifShoppingCartEmpty();
+  if (
+    typeof localStorage["shoppingCart"] === "undefined" ||
+    localStorage["shoppingCart"] === "[]"
+  ) {
+    location.reload();
+  }
 }
 
 window.addEventListener("load", () => {
+  ifShoppingCartEmpty();
   getCartItemFromLs();
 });
-
-function newAmountOfProducts(cartItem: CartItem[]) {
-  localStorage.setItem("shoppingCart", JSON.stringify(cartItem));
-}
 
 function emptyShoppingCart() {
   if (
@@ -178,22 +181,22 @@ function emptyShoppingCart() {
     let emptyCartHeader: HTMLHeadingElement = document.createElement("h3");
     let emptyCartText: HTMLParagraphElement = document.createElement("p");
     let emptyCartInfo: HTMLParagraphElement = document.createElement("p");
-    let emptyCartLink: HTMLAnchorElement = document.createElement("a")
-    let emptyCartButton: HTMLButtonElement = document.createElement("button")
+    let emptyCartLink: HTMLAnchorElement = document.createElement("a");
+    let emptyCartButton: HTMLButtonElement = document.createElement("button");
 
     emptyCartContainer.classList.add("empty-cart-container");
     emptyCartHeader.classList.add("empty-cart-container__header");
     emptyCartText.classList.add("empty-cart-container__text");
     emptyCartInfo.classList.add("empty-cart-container__info");
-    emptyCartLink.classList.add("empty-cart-container__link")
-    emptyCartButton.classList.add("empty-cart-container__link__button")
+    emptyCartLink.classList.add("empty-cart-container__link");
+    emptyCartButton.classList.add("empty-cart-container__link__button");
 
     emptyCartHeader.innerHTML = "Oops!";
     emptyCartText.innerHTML = "Din varukorg är tom!";
     emptyCartInfo.innerHTML =
       "När du handlar hos oss får du alltid fri frakt och fri retur till butik.";
-      emptyCartLink.href = "./products.html"
-    emptyCartButton.innerHTML = "Till produkter"
+    emptyCartLink.href = "./products.html";
+    emptyCartButton.innerHTML = "Till produkter";
 
     mainContainer.appendChild(emptyCartContainer);
     emptyCartContainer.appendChild(emptyCartHeader);
@@ -201,7 +204,6 @@ function emptyShoppingCart() {
     emptyCartContainer.appendChild(emptyCartInfo);
     emptyCartContainer.appendChild(emptyCartLink);
     emptyCartLink.appendChild(emptyCartButton);
-    
   }
 }
 

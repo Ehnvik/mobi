@@ -1,6 +1,11 @@
 import { IProduct } from "./models/IProduct";
 import { CartItem } from "./models/CartItem";
 import { ifShoppingCartEmpty } from "./models/ifShoppingCartEmpty";
+import { newAmountOfProducts } from "./localStorageService";
+
+// function getShoppingCartItemFromLs() {
+
+// }
 
 function getProductDetailsFromLs() {
   let productDetails: IProduct = JSON.parse(
@@ -109,14 +114,34 @@ function createProductDetailsHtml(productDetails: IProduct) {
   shopButton.innerHTML = "Lägg i varukorg";
 
   shopButton.addEventListener("click", () => {
-    newProductObject(
-      productDetails,
-      selectedColor,
-      selectedImage,
-      selectedAmount
+    let shoppingCartItem: CartItem[] = JSON.parse(
+      localStorage.getItem("shoppingCart") || "[]"
     );
 
-    sendToLs();
+    let found = false;
+
+    shoppingCartItem.forEach((item) => {
+      if (
+        productDetails.name === item.product.name &&
+        selectedColor === item.color
+      ) {
+        item.amount += 1;
+        found = true;
+      }
+    });
+
+    console.log(shoppingCartItem);
+    if (!found) {
+      let selectedProduct = newProductObject(
+        productDetails,
+        selectedColor,
+        selectedImage,
+        selectedAmount
+      );
+      shoppingCartItem.push(selectedProduct);
+    }
+
+    newAmountOfProducts(shoppingCartItem);
     ifShoppingCartEmpty();
   });
 
@@ -145,9 +170,10 @@ function newProductObject(
   amount: number
 ) {
   let selectedProduct = new CartItem(product, color, image, amount);
-  selectedProductList.push(selectedProduct);
+  return selectedProduct;
+  // selectedProductList.push(selectedProduct);
 }
 
-function sendToLs() {
-  localStorage.setItem("shoppingCart", JSON.stringify(selectedProductList));
-}
+// function sendToLs() {
+//   localStorage.setItem("shoppingCart", JSON.stringify(selectedProductList));
+// }
