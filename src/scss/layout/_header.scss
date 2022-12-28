@@ -237,3 +237,21 @@
     padding: 8px 0px;
   }
 }
+
+.shopping-cart {
+  &__icon {
+    color: #5c7e96;
+  }
+  &__amount {
+    font-family: c.$primaryFont;
+    position: absolute;
+    padding-left: 5px;
+    top: -3px;
+    font-size: 18px;
+    color: red;
+    @include c.small {
+      top: 5px;
+      font-size: 22px;
+    }
+  }
+}
