@@ -25,21 +25,26 @@ function summaryOfOrder(summary: CartItem[]) {
   let sum = 0;
 
   summary.forEach((summaryItem: CartItem) => {
-    let orderContainer: HTMLDivElement = document.getElementById(
+    let summaryContainer: HTMLDivElement = document.getElementById(
       "orderSummaryContainer"
     ) as HTMLDivElement;
-    let summaryContainer: HTMLDivElement = document.createElement("div");
+    let productContainer: HTMLDivElement = document.createElement("div");
     let summaryDescription: HTMLParagraphElement = document.createElement("p");
     let summaryColorContainer: HTMLParagraphElement =
       document.createElement("p");
     let summaryAmount: HTMLParagraphElement = document.createElement("p");
     let summaryPrice: HTMLParagraphElement = document.createElement("p");
 
-    summaryContainer.classList.add("summaryContainer");
-    summaryDescription.classList.add("summaryContainer__description");
-    summaryPrice.classList.add("summaryContainer__price");
-    summaryAmount.classList.add("summaryContainer__amount");
-    summaryColorContainer.classList.add("summaryContainer__color");
+    summaryContainer.classList.add("checkout__summary-container");
+    productContainer.classList.add("checkout__summary-container__product");
+    summaryDescription.classList.add(
+      "checkout__summary-container__product__description"
+    );
+    summaryPrice.classList.add("checkout__summary-container__product__price");
+    summaryAmount.classList.add("checkout__summary-container__product__amount");
+    summaryColorContainer.classList.add(
+      "checkout__summary-container__product__color"
+    );
 
     summaryDescription.innerHTML = summaryItem.product.description;
     summaryColorContainer.innerHTML = summaryItem.color.toString();
@@ -48,15 +53,23 @@ function summaryOfOrder(summary: CartItem[]) {
 
     arrayOfTotalCost.push(summaryItem.amount * summaryItem.product.price);
 
-    orderContainer.appendChild(summaryContainer);
-    summaryContainer.appendChild(summaryDescription);
-    summaryContainer.appendChild(summaryColorContainer);
-    summaryContainer.appendChild(summaryAmount);
-    summaryContainer.appendChild(summaryPrice);
+    summaryContainer.appendChild(productContainer);
+    productContainer.appendChild(summaryDescription);
+    productContainer.appendChild(summaryColorContainer);
+    productContainer.appendChild(summaryAmount);
+    productContainer.appendChild(summaryPrice);
+    summaryContainer.appendChild(totalCost);
   });
   for (let i = 0; i < arrayOfTotalCost.length; i++) {
     sum += arrayOfTotalCost[i];
   }
   let sumText: string = sum.toString();
-  totalCost.innerHTML = `Total summa: ${sumText} kr`;
+  if (
+    typeof localStorage["shoppingCart"] === "undefined" ||
+    localStorage["shoppingCart"] === "[]"
+  ) {
+    totalCost.style.display = "none";
+  } else {
+    totalCost.innerHTML = `Total summa: ${sumText} kr`;
+  }
 }
