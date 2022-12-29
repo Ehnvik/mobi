@@ -1,0 +1,19 @@
+@use "../components/" as c;
+
+.confirmContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 83vh;
+  text-align: center;
+  padding: 20px;
+
+  &__header {
+    font-family: c.$titleFont;
+  }
+
+  &__information {
+    font-family: c.$primaryFont;
+  }
+}
