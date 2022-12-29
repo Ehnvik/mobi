@@ -94,17 +94,25 @@ function createProductDetailsHtml(productDetails: IProduct) {
   let selectedAmountText: string = selectedAmount.toString();
 
   additionIcon.addEventListener("click", () => {
+    let cartItem: CartItem[] = JSON.parse(
+      localStorage.getItem("shoppingCart") || "[]"
+    );
     selectedAmount++;
     selectedAmountText = selectedAmount.toString();
     amountNumber.innerHTML = selectedAmountText;
+    newAmountOfProducts(cartItem);
   });
 
   subtractIcon.addEventListener("click", () => {
+    let cartItem: CartItem[] = JSON.parse(
+      localStorage.getItem("shoppingCart") || "[]"
+    );
     if (selectedAmount > 1) {
       selectedAmount--;
       selectedAmountText = selectedAmount.toString();
       amountNumber.innerHTML = selectedAmountText;
     }
+    newAmountOfProducts(cartItem);
   });
 
   subtractIcon.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
@@ -125,7 +133,8 @@ function createProductDetailsHtml(productDetails: IProduct) {
         productDetails.name === item.product.name &&
         selectedColor === item.color
       ) {
-        item.amount += 1;
+        item.amount += selectedAmount;
+        console.log(item.amount);
         found = true;
       }
     });
@@ -159,10 +168,6 @@ function createProductDetailsHtml(productDetails: IProduct) {
   productInfoContainer.appendChild(shopButton);
 }
 
-let selectedProductList: CartItem[] = JSON.parse(
-  localStorage.getItem("shoppingCart") || "[]"
-);
-
 function newProductObject(
   product: IProduct,
   color: string,
@@ -171,9 +176,4 @@ function newProductObject(
 ) {
   let selectedProduct = new CartItem(product, color, image, amount);
   return selectedProduct;
-  // selectedProductList.push(selectedProduct);
 }
-
-// function sendToLs() {
-//   localStorage.setItem("shoppingCart", JSON.stringify(selectedProductList));
-// }
