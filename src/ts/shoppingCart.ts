@@ -17,7 +17,7 @@ let toCheckoutButton: HTMLButtonElement = document.getElementById(
   "toCheckoutButton"
 ) as HTMLButtonElement;
 
-function getCartItemFromLs() {
+export function getCartItemFromLs() {
   let cartItem: CartItem[] = JSON.parse(
     localStorage.getItem("shoppingCart") || "[]"
   );

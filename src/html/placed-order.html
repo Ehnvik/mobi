@@ -7,7 +7,7 @@
     <script
       src="https://kit.fontawesome.com/bc5eefc1c7.js"
       crossorigin="anonymous"></script>
-    <script src="../ts/checkout.ts" defer type="module"></script>
+    <script src="../ts/placedOrder.ts" defer type="module"></script>
     <link rel="stylesheet" href="../scss/main.scss" />
     <title>Mobi Mobilskal</title>
   </head>
@@ -38,10 +38,12 @@
             >
           </li>
           <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Kontakt</a>
+            <a class="menu__list__link__anchor" href="./contact.html"
+              >Kontakt</a
+            >
           </li>
           <li class="menu__list__link">
-            <a class="menu__list__link__anchor" href="#">Om oss</a>
+            <a class="menu__list__link__anchor" href="./about.html">Om oss</a>
           </li>
         </ul>
         <div class="menu__bag-box">
@@ -55,56 +57,15 @@
       <p class="free-shipping">Just nu! Fri frakt på alla våra skal</p>
     </header>
 
-    <main id="checkout" class="checkout">
-      <div class="checkout__container">
-        <h3 class="checkout__container__header">Leveransuppgifter</h3>
-        <form action="./placed-order.html" class="checkout__container__form">
-          <input
-            class="checkout__container__input"
-            type="text"
-            placeholder="Namn"
-            required />
-
-          <input
-            class="checkout__container__input"
-            type="number"
-            placeholder="Mobilnummer"
-            required />
-          <input
-            class="checkout__container__input"
-            type="email"
-            placeholder="E-post"
-            required />
-          <input
-            class="checkout__container__input"
-            type="text"
-            placeholder="Gata"
-            required />
-          <input
-            class="checkout__container__input"
-            type="number"
-            placeholder="Postnummer"
-            required />
-          <input
-            class="checkout__container__input"
-            type="text"
-            placeholder="Stad"
-            required />
-          <input
-            class="checkout__container__input"
-            type="number"
-            placeholder="Kortuppgifter"
-            required />
-          <button id="checkoutButton" class="checkout__button" type="submit">
-            Beställ
-          </button>
-        </form>
-      </div>
-      <div id="orderSummaryContainer">
-        <p
-          id="checkoutSummaryTotalCost"
-          class="checkout__summary__totalCost"></p>
-      </div>
+    <main class="confirmContainer">
+      <h1 class="confirmContainer__header">Tack för att du handlar på Mobi!</h1>
+      <p class="confirmContainer__information">
+        Vi har tagit emot din beställning och kommer att meddela dig när din
+        order har skickats.
+      </p>
+      <a href="../index.html"
+        ><button class="confirmContainer__button">Till Startsida</button></a
+      >
     </main>
 
     <footer class="footer">
